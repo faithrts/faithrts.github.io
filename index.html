@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faith Ruetas</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="hamburger.css">
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
 
 <body>
+
     <nav id="desktop-nav">
         <div class="logo">Faith Ruetas</div>
         <div>
@@ -21,6 +24,27 @@
             </ul>
         </div>
     </nav>
+
+    <nav id="hamburger-nav">
+        <div class="logo">Faith Ruetas</div>
+        <div class="hamburger-menu">
+            <!-- onclick="toggleMenu()" allows the hamburger to be opened"-->
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <!-- the lines of the hamburger menu-->
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <!-- onclick="toggleMenu()" allows the hamburger to be closed"-->
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#Projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#Contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+
     <script src="script.js"></script>
 </body>
 

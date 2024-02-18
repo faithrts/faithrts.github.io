@@ -72,18 +72,18 @@ section {
 
 
 .section__text__p1 {
-    text-align: center;
-    /* TODO: make line height smaller when spanned */
-}
+    text-align: center; /* this is not needed */
+ }
 
 .section__text__p2 {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .title {
     font-size: 3rem;
-    text-align: center;
+    line-height: 130%;
+    margin: 0.5rem;
 }
 
 #socials-container {
@@ -114,18 +114,25 @@ section {
     padding: 1rem;
     width: 8rem;
     border-radius: 2rem;
-}
-
-.btn-color-1, .btn-color-2 {
-    border: rgb(53, 53, 53) 0.1rem solid;
-}
-
-.btn-color-1-hover, .btn-color-2-hover {
     cursor: pointer;
 }
 
+.btn-color-1 {
+    border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-2 {
+    border: rgb(192, 192, 192) 0.1rem solid;
+}
+
+/*
+.btn-color-1-hover, .btn-color-2-hover {
+    cursor: pointer;
+}
+*/
+
 .btn-color-1, .btn-color-2-hover {
-    background: rgb(53, 53, 53);
+    background: rgb(60, 60, 60);
     color: white;
 }
 
@@ -138,7 +145,7 @@ section {
 }
 
 .btn-color-2:hover {
-    border: rgb(255, 255, 255) 0.1rem solid;
+    border: rgb(53, 53, 53) 0.1rem solid;
 }
 
 .btn-container {

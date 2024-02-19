@@ -54,10 +54,10 @@ section {
 }
 
 /* the headshot */
-.section__pic-container {
+.section__pic-container-square {
     display: flex;
     height: 400px;
-    width: 400px;
+    max-width: 400px;
     margin: auto 0;
 }
 
@@ -77,13 +77,14 @@ section {
 
 .section__text__p2 {
     font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
 }
 
 .title {
     font-size: 3rem;
-    line-height: 130%;
+    line-height: 110%;
     margin: 0.5rem;
+    text-align: center;
 }
 
 #socials-container {
@@ -105,7 +106,7 @@ section {
 .btn-container {
     display: flex;
     justify-content:center;
-    gap: 1rem;
+    margin-bottom: 1.25rem;
 }
 
 .btn {
@@ -150,4 +151,61 @@ section {
 
 .btn-container {
     gap: 1rem;
+}
+
+/* ABOUT section */
+
+#about {
+    position: relative;
+}
+
+.about-container {
+    gap: 3rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.about-details-container {
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-container,
+.about-details-container {
+    display: flex;
+}
+
+.about-pic {
+    border-radius: 3rem;
+    max-width: 375px;
+}
+
+.arrow {
+    /* want to be absolute to the section */
+    position: absolute;
+
+    /* -5 from the rigtht corner, and 2.5 rem up from the bottom */
+    right: -5rem;
+    bottom: 2.5rem;
+}
+
+.details-container {
+    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    text-align: center;
+}
+
+.section-container {
+    gap: 4rem;
+    height: 80%;
+}
+
+.section__pic-container-rectangle {
+    height: 400px;
+    max-width: 600px;
+    margin: auto 0;
 }

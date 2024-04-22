@@ -19,6 +19,10 @@ p {
     color: rgb(85, 85, 85);
 }
 
+p3 {
+    color: rgb(153, 153, 153);
+}
+
 /* TRANSITION */
 
 /*
@@ -160,8 +164,17 @@ section {
 /* ICONS */
 
 .icon {
+    cursor: default;
+    height: 2rem;
+}
+
+.socials-icon {
     cursor: pointer;
     height: 2rem;
+}
+
+.arrow {
+    cursor: pointer;
 }
 
 /* BUTTONS */
@@ -181,34 +194,34 @@ section {
     cursor: pointer;
 }
 
-.btn-color-1 {
+.btn-colour-1 {
     border: rgb(53, 53, 53) 0.1rem solid;
 }
 
-.btn-color-2 {
+.btn-colour-2 {
     border: rgb(192, 192, 192) 0.1rem solid;
 }
 
 /*
-.btn-color-1-hover, .btn-color-2-hover {
+.btn-colour-1-hover, .btn-colour-2-hover {
     cursor: pointer;
 }
 */
 
-.btn-color-1, .btn-color-2-hover {
+.btn-colour-1, .btn-colour-2-hover {
     background: rgb(60, 60, 60);
     color: white;
 }
 
-.btn-color-1:hover {
+.btn-colour-1:hover {
     background: rgb(0, 0, 0);
 }
 
-.btn-color-2 {
+.btn-colour-2 {
     background: none;
 }
 
-.btn-color-2:hover {
+.btn-colour-2:hover {
     border: rgb(53, 53, 53) 0.1rem solid;
 }
 
@@ -226,15 +239,12 @@ section {
     gap: 3rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
+    display: flex;
 }
 
 .about-details-container {
     justify-content: center;
     flex-direction: column;
-}
-
-.about-container,
-.about-details-container {
     display: flex;
 }
 
@@ -257,8 +267,7 @@ section {
     flex: 1;
     background: white;
     border-radius: 2rem;
-    border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163, 163, 163);
+    border: rgb(163, 163, 163) 0.1rem solid;
     text-align: center;
 }
 
@@ -316,6 +325,61 @@ article {
     gap: 0.5rem;
 }
 
-article .icon {
-    cursor: default;
+/* PROJECTS section */
+
+#projects {
+    position: relative;
+}
+
+.project-img {
+    border-radius: 2rem;
+    width: 100%;
+    height: 100%;
+}
+
+.project-title {
+    margin: 1.75rem 0rem 0.75rem 0rem;
+}
+
+.three-col-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*
+    border-color: rgb(163, 163, 163);
+    background: rgb(245, 245, 245);
+    */
+}
+
+/*
+.details-container {
+    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    text-align: center;
+}*/
+
+.three-col-item {
+    /* same as "flex-grow: 0;" and "flex-shrink: 0;" and "flex-basis: 33.3333%;" together */
+    width: 25%;
+    flex-grow: 1;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    border: rgb(163, 163, 163) 0.1rem solid;
+    text-align: center;
+}
+
+.project-container {
+    display: flex;
+    text-align: initial;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2.5rem;
+    justify-content: space-around;
+}
+
+.project-btn {
+    margin-top: 1.75rem;
 }

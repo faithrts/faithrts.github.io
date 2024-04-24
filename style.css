@@ -94,7 +94,7 @@ a:hover {
     cursor: default;
 }
 
-/* SECTIONS */
+/* SECTIONS in general */
 
 section {
     padding-top: 4vh;
@@ -329,6 +329,8 @@ article {
 
 #projects {
     position: relative;
+    height: auto;
+    min-height: 100%;
 }
 
 .project-img {
@@ -382,4 +384,29 @@ article {
 
 .project-btn {
     margin-top: 1.75rem;
+}
+
+/* CONTACT section */
+
+#contact {
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    /* 1/4 of height */
+    padding-top: 25vh;
+}
+
+/* FOOTER */
+
+footer {
+    height: 10vh;
+    margin: 0;
+    padding-top: 6.5vh;
+    /*background-color: rgb(7, 44, 103);*/
+}
+
+footer p {
+    text-align: center;
+    /*color: rgb(34, 216, 240);*/
 }

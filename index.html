@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faith Ruetas</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_new.css">
     <link rel="stylesheet" href="hamburger.css">
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
@@ -13,7 +13,9 @@
 <body>
 
     <nav id="desktop-nav">
-        <div class="logo">Faith Ruetas</div>
+        <div class="logo">
+            <h1>faithrts</h1>
+        </div>
         <div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
@@ -25,7 +27,9 @@
     </nav>
 
     <nav id="hamburger-nav">
-        <div class="logo">Faith Ruetas</div>
+        <div class="logo">
+            <h1>faithrts</h1>
+        </div>
         <div class="hamburger-menu">
             <!-- onclick="toggleMenu()" allows the hamburger to be opened"-->
             <div class="hamburger-icon" onclick="toggleMenu()">
@@ -60,14 +64,16 @@
 
             <div class="btn-container">
                 <!-- window.open("https://webkinz.com") opens the URL in a new browser-->
-                <button class="btn btn-colour-2" onclick="window.open('.assets/resume.pdf')">
+                <button class="btn btn-colour-1" onclick="window.open('.assets/resume.pdf')">
                     Resume
                 </button>
 
                 <!-- location.href = "https://webkinz.com" sets the URL of the current page -->
-                <button class="btn btn-colour-1" onclick="location.href='./#contact'">
+                <!-- 
+                <button class="btn btn-colour-2" onclick="location.href='./#contact'">
                     Contact
                 </button>
+                --> 
             </div>
 
             <div id="socials-container">
@@ -92,7 +98,7 @@
     <section id="about">
 
         <div class="section__text">
-            <p class="section__text__p1">  A little bit </p>
+            <p class="section__text__p1">  A bit </p>
             <h1 class="title"> About me </h1>
         </div>
 
@@ -116,7 +122,7 @@
                             class="icon"
                         >
 
-                        <h3>BA Computer science </h3>
+                        <h3>BA computer science </h3>
                         <p3> Text mining, dataset creation, data visualization, NLP </p3>
                     </div>
 
@@ -128,15 +134,22 @@
                         >
 
                         <h3>BA English literature </h3>
-                        <p3> Copywriting, editing, researching, DH studies </p3>
+                        <p3> Copywriting, editing, researching, digital humanities studies </p3>
                     </div>
                 </div>
 
                 <div class="text-container">
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam 
-                        odit sunt vitae iusto, animi obcaecati sapiente ab! Laudantium 
-                        obcaecati sunt provident nam explicabo necessitatibus, nemo minima 
-                        nesciunt perferendis. Magni, sapiente.</p>
+                    <p> 
+
+                        Having studied computer science and English literature, I bring
+                        an intersectional perspective geared to multifaceted, creative exploration.
+                        I can write, present, distill complex ideas into bite-sized summaries;
+                        design, build, optimize while still keeping an eye on the big picture; and 
+                        ask the right questions to fill narrative and knowledge gaps 
+                        across the board.
+
+
+                    </p>
                 </div>
 
             </div>
@@ -144,7 +157,7 @@
 
         <!-- arrow to go to the experience section -->
         <img 
-            src="./assets/arrow.png"
+            src="./assets/down_arrow.png"
             alt="arrow icon"
             class="icon arrow"
             onclick="location.href='./#experience'"
@@ -153,14 +166,14 @@
     </section>
 
     <section id="experience">
-        <p class="section__text__p1"> Here's some of my </p>
+        <p class="section__text__p1"> In brief, my </p>
         <h1 class="title">Experience</h1>
         <div class="experience-details-container">
             <div class="about-container">
 
                 <!-- Technical experience -->
                 <div class="details-container">
-                    <h2 class="experience-sub-title">Programmer roles</h2>
+                    <h2 class="experience-sub-title">Programming roles</h2>
                     <div class="article-container">
                         <article>
                             <img 
@@ -169,7 +182,7 @@
                                 class="icon"
                             />
                             <div>
-                                <h3> Research Assistant </h3>
+                                <h3> Technical Research Assistant </h3>
                                 <p3> <i>McGill Office of Science Education (OSE)</i> </p3>
                             </div>
                         </article>
@@ -193,7 +206,7 @@
                                 class="icon"
                             />
                             <div>
-                                <h3> Research assistant </h3>
+                                <h3> Technical Research Assistant </h3>
                                 <p3> <i>McGill School of Computer Science (SOCS)</i> </p3>
                             </div>
                         </article>
@@ -214,7 +227,7 @@
                 </div>
                 <!-- Non-technical experience -->
                 <div class="details-container">
-                    <h2 class="experience-sub-title">Non-programmer roles</h2>
+                    <h2 class="experience-sub-title">Non-programming roles</h2>
                     <div class="article-container">
                         <article>
                             <img 
@@ -236,7 +249,7 @@
                             />
                             <div>
                                 <h3> Co-President </h3>
-                                <p3> <i>McGill Department of English Student Association (DESA)</i> </p3>
+                                <p3> <i>McGill Dept. of English Student Association (DESA)</i> </p3>
                             </div>
                         </article>
 
@@ -271,7 +284,7 @@
 
         <!-- arrow to go to the projects section -->
         <img 
-            src="./assets/arrow.png"
+            src="./assets/down_arrow.png"
             alt="arrow icon"
             class="icon arrow"
             onclick="location.href='./#projects'"
@@ -394,12 +407,12 @@
             </div>
         </div>
 
-        <!-- arrow to go to the projects section -->
+        <!-- arrow to go to the contact section -->
         <img 
-            src="./assets/arrow.png"
+            src="./assets/down_arrow.png"
             alt="arrow icon"
             class="icon arrow"
-            onclick="location.href='./#projects'"
+            onclick="location.href='./#contact'"
         >
     </section>
 

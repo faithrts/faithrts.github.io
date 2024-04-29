@@ -12,10 +12,17 @@
 */
 
 /*
-When the screen size is lower than 1200 pixels, the desktop navigation
-is going to disappear, leaving instead the hamburger
+First breakpoint:
+- Desktop navigation disappears
+- Hamburger navigation appears
+- Photos and text are scaled down
 */
 @media screen and (max-width: 1200px) {
+    /* #hero doesnt have any margin stipulations, but it does have display stipulations */
+    section {
+        margin: 0 10%;
+    }
+
     #desktop-nav {
         display: none;
     }
@@ -28,4 +35,148 @@ is going to disappear, leaving instead the hamburger
         margin-top: 2rem;
     }
     */
+
+    #hero {
+        margin: 0px 10rem;
+    }
+
+    #experience {
+        height: 100vh;
+    }
+
+    .about-pic {
+        max-width: 300px;
+    }
+
+    .experience-sub-title {
+        font-size: 1.4rem;
+    }
+    
+    h3 {
+        font-size: 1rem;
+    }
+
+    p3 {
+        font-size: 0.9rem;
+    }
+
+    .text-container {
+        font-size: 0.9rem;
+    }
+}
+
+/*
+Second breakpoint:
+- Rectangle pic disappears
+*/
+@media screen and (max-width: 840px) {
+
+    #hero {
+        margin: 0 5%;
+        gap: 1rem;
+    }
+
+    #about {
+        height: 80vh;
+    }
+
+    #experience {
+        height: auto;
+        margin-bottom: 8vh;
+    }
+
+    .section__pic-container-square {
+        height: 350px;
+        max-width: 350px;
+    }
+
+    .section__pic-container-rectangle {
+        display: none;
+    }
+
+    .section-container {
+        display: block;
+    }
+
+    .article-container {
+        padding: 0px 0px 0px 1rem;
+    }
+
+    .section__text__p2 {
+        font-size: 1.3rem;
+    }
+}
+
+/*
+Third breakpoint:
+- Block view for everything after hero section
+*/
+@media screen and (max-width: 700px) {
+    
+    #about {
+        height: 96vh;
+    }
+    
+    .section__pic-container-square {
+        height: 325px;
+        max-width: 325px;
+    }
+
+    .about-container {
+        display: block;
+        margin-bottom: 0;
+    }
+    
+    .details-container {
+        margin-bottom: 2rem;
+    }
+
+    .three-col-item {
+        width: calc(100% - 3rem);
+        margin-bottom: 2rem;
+    }
+}
+
+/*
+Fourth breakpoint:
+- Block view for hero section
+*/
+@media screen and (max-width: 650px) {
+
+    #hero {
+        display: block;
+        height: 90vh;
+    }
+    
+
+    .section__pic-container-square {
+        height: 300px;
+        max-width: 300px;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .section__text__p1 {
+        font-size: 0.8rem;
+    }
+
+    .section__text__p2 {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 370px) {
+
+    .section__pic-container-square {
+        height: 250px;
+        max-width: 250px;
+    }
+
+    .section__text__p2 {
+        font-size: 1rem;
+    }
 }

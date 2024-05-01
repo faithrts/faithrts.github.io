@@ -3,9 +3,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
 
+:root {
+    /* sand colour palette */
+    /*
+    --background: #F1EEE5;
+    --background-lighter: #F8F7F2;
+    --accent-colour-light: #FFFFFF;
+    --accent-colour-bold: #353535;
+    --accent-colour-dark: #3c3c3c;
+    */
+
+    /* vscode purple colour palette */
+    --background: #F2F2F2;
+    --background-lighter: #F5F5F5;
+    --accent-colour-light: #D6CFE1;
+    --accent-colour-bold: #9068B0;
+    --accent-colour-dark: #6C5291;
+
+    /* TODO: button default and hover colours */
+
+}
+
 * {
     margin: 0;
     padding: 0;
+}
+
+html {
+    /*
+    background-color: #E4DFD3;
+    */
+    background-color: var(--background);
 }
 
 body {
@@ -202,19 +230,14 @@ section {
 .btn-colour-1 {
     border: rgb(53, 53, 53) 0.1rem solid;
     background: rgb(60, 60, 60);
+    /* text colour = white */
     color: white;
 }
 
 .btn-colour-2 {
     border: rgb(192, 192, 192) 0.1rem solid;
-    background: none;
+    background: var(--background-lighter);
 }
-
-/*
-.btn-colour-1, .btn-colour-2-hover {
-    background: rgb(60, 60, 60);
-    color: white;
-}*/
 
 .btn-colour-1:hover {
     background: rgb(0, 0, 0);
@@ -223,6 +246,7 @@ section {
 
 .btn-colour-2:hover {
     border: rgb(53, 53, 53) 0.1rem solid;
+    /* text colour = white */
 }
 
 .btn-container {
@@ -265,7 +289,7 @@ section {
 .details-container {
     padding: 1.5rem;
     flex: 1;
-    background: white;
+    background: var(--background-lighter);
     border-radius: 2rem;
     border: rgb(163, 163, 163) 0.1rem solid;
     text-align: center;
@@ -372,6 +396,7 @@ article {
     border-radius: 2rem;
     border: rgb(163, 163, 163) 0.1rem solid;
     text-align: center;
+    background-color: var(--background-lighter);
 }
 
 .project-container {

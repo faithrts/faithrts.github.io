@@ -1,14 +1,58 @@
 /* GENERAL */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
+
+:root {
+
+     /* default colour palette */
+    --background: #F2F2F2;
+    --background-lighter: #F5F5F5;
+    --colour-neutral: #C0C0C0;
+    --colour-medium: #353535;
+    --colour-bold: black;
+    --colour-dark: #3c3c3c;
+    --accent-colour: #C4DCFF;
+    --accent-colour-dark: #1665DC;
+    --accent-colour-darker: #114CA5;
+    --accent-colour-darkest: #0B336E;
+    
+    --btn-1: var(--accent-colour-dark);
+    --btn-1-text: var(--accent-colour);
+    --btn-1-border: var(--accent-colour-dark);
+    --btn-1-hover: var(--accent-colour-darker);
+    --btn-1-hover-border: var(--accent-colour-darker);
+    --btn-1-hover-text: white;
+
+    --btn-2-text: var(--accent-colour-dark);
+    --btn-2-border: var(--accent-colour);
+    --btn-2-hover-border: var(--accent-colour-dark);
+    --btn-2-hover-text: var(--accent-colour-darker);
+
+    --title-colour: var(--accent-colour-darkest);
+    --h3-colour: var(--accent-colour-darker);
+}
 
 * {
     margin: 0;
     padding: 0;
 }
 
+html {
+    background-color: var(--background);
+}
+
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Space Mono';
+}
+
+h1 {
+    font-family: 'Reenie Beanie';
+    color: var(--title-colour);
+}
+
+h3 {
+    color: var(--h3-colour);
 }
 
 html {
@@ -23,6 +67,12 @@ p3 {
     color: rgb(153, 153, 153);
 }
 
+/* TODO: figure out how to target a inside li inside class
+.page-link > li a {
+    color: var(--colour-medium);
+}
+*/
+
 /* TRANSITION */
 
 /*
@@ -35,6 +85,10 @@ a,
 }
 
 /* DESKTOP NAV */
+
+.logo h1 {
+    color: var(--accent-colour);
+}
 
 /* 
 flexbox:
@@ -71,16 +125,20 @@ rem is like pixels
 }
 
 a {
-    color: black;
+    color: var(--colour-medium);
     text-decoration: none;
     text-decoration-color: white;
 }
 
 a:hover {
-    color: grey;
+    color: var(--accent-colour-dark);
+    background-color: var(--accent-colour);
+
+    /* underline on hover
     text-decoration: underline;
     text-underline-offset: 0.75rem;
     text-decoration-color: rgb(181, 181, 181);
+    */
 }
 
 .logo {
@@ -108,6 +166,116 @@ section {
     display: flex;
 }
 
+/* HAMBURGER MENU */
+
+/*
+The id "#" selector selects the id attribute of an
+HTML element to select a specific element; an id 
+is always unique within the page so it is chosen 
+to select a single, unique element 
+*/
+#hamburger-nav {
+    display: none;
+}
+
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+/*
+Makes the lines of the hamburger menu visible
+*/
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3 ease-in-out;
+}
+
+/*
+The links when the hamburger menu is opened
+"top: 100%" starts the menu links at the end of its div
+"right: 0" positions the menu links at the rightmost edge of its div
+"overflow: hidden" makes the link texts invisible, leaving the hamburger
+"transition: ... ease-in-out" specifies a trasition effect with a slow start and end
+*/
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links a:hover {
+    color: var(--accent-colour-dark);
+}
+
+.menu-links li {
+    /* Removes bullet points */
+    list-style: none;
+}
+
+.menu-links.open {
+    max-height: 300px;
+    background: var(--accent-colour-dark);
+}
+
+/*
+first-child refers to first spanned element
+*/
+.hamburger-icon.open span:first-child {
+    /* transforms the first line, moving it to one of the lines in an X */
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+/*
+nth-child(2) refers to the second spanned element
+*/
+.hamburger-icon.open span:nth-child(2) {
+    /* removes the second line completely */
+    opacity: 0;
+}
+
+.hamburger-icon.open span:nth-child(3) {
+    /* transforms the first line, moving it to one of the lines in an X */
+    transform: rotate(315deg) translate(10px, -5px);
+}
+
+/*      THIS WAS IN THE TUTORIAL BUT I DON'T KNOW WHY
+.hamburger-icon span:first-child {
+    transform: none
+}
+.hamburger-icon span:first-child {
+    opacity: 1;
+}
+.hamburger-icon span:first-child {
+    transform: none
+}
+*/
+
 /* HERO SECTION */
 
 #hero {
@@ -130,13 +298,6 @@ section {
     text-align: center;
 }
 
-/*
-.section__text p {
-    font-weight: 600;
-}
-*/
-
-
 .section__text__p1 {
     text-align: center; /* this is not needed */
     font-weight: 600;
@@ -154,11 +315,19 @@ section {
     text-align: center;
 }
 
+#hero h1 {
+    color: var(--accent-colour-dark);
+}
+
 #socials-container {
     display: flex;
     justify-content: center;
     margin-top: 1rem;
     gap: 1rem;
+}
+
+#socials-container a:hover {
+    background-color: transparent;
 }
 
 /* ICONS */
@@ -175,6 +344,24 @@ section {
 
 .arrow {
     cursor: pointer;
+}
+
+.hero-icon {
+    margin-top: 1rem;
+    color: var(--accent-colour);
+}
+
+.hero-icon:hover {
+    color: var(--colour-opposite-darker);
+}
+
+.ab-icon {
+    margin: 1.25rem 0;
+    color: var(--accent-colour-dark);
+}
+
+.bullet-icon {
+    margin: 0.8rem 1rem 0 0.2rem;
 }
 
 /* BUTTONS */
@@ -195,29 +382,28 @@ section {
 }
 
 .btn-colour-1 {
-    border: rgb(53, 53, 53) 0.1rem solid;
-    background: rgb(60, 60, 60);
-    color: white;
+    border: var(--btn-1-border) 0.1rem solid;
+    background: var(--btn-1);
+    /* text colour = white */
+    color: var(--btn-1-text);
+}
+
+.btn-colour-1:hover {
+    border: var(--btn-1-hover-border) 0.1rem solid;
+    background: var(--btn-1-hover);
+    color: var(--btn-1-hover-text)
 }
 
 .btn-colour-2 {
-    border: rgb(192, 192, 192) 0.1rem solid;
-    background: none;
+    border: var(--btn-2-border) 0.1rem solid;
+    background: var(--background-lighter);
+    color: var(--btn-2-text);
 }
-
-/*
-.btn-colour-1, .btn-colour-2-hover {
-    background: rgb(60, 60, 60);
-    color: white;
-}*/
-
-.btn-colour-1:hover {
-    background: rgb(0, 0, 0);
-}
-
 
 .btn-colour-2:hover {
-    border: rgb(53, 53, 53) 0.1rem solid;
+    border: var(--btn-2-hover-border) 0.1rem solid;
+    color: var(--btn-2-hover-text);
+    /* text colour = white */
 }
 
 .btn-container {
@@ -260,7 +446,7 @@ section {
 .details-container {
     padding: 1.5rem;
     flex: 1;
-    background: white;
+    background: var(--background-lighter);
     border-radius: 2rem;
     border: rgb(163, 163, 163) 0.1rem solid;
     text-align: center;
@@ -272,6 +458,7 @@ section {
 }
 
 .section__pic-container-rectangle {
+    display: flex;
     height: 400px;
     max-width: 600px;
     margin: auto 0;
@@ -285,10 +472,13 @@ section {
     is absolutely placed based on the closest parent
     element with position: relative */
     position: relative;
+    height: auto;
+    margin-bottom: 3rem;
 }
 
 .experience-sub-title {
-    color: rgb(85, 85, 85);
+    /*color: rgb(85, 85, 85);*/
+    color: var(--accent-colour-dark);
     font-weight: 600;
     font-size: 1.75rem;
     margin-bottom: 2rem;
@@ -366,6 +556,7 @@ article {
     border-radius: 2rem;
     border: rgb(163, 163, 163) 0.1rem solid;
     text-align: center;
+    background-color: var(--background-lighter);
 }
 
 .project-container {
@@ -393,6 +584,24 @@ article {
     padding-top: 35vh;
 }
 
+#contact .section__text__p1 {
+    font-size: 1.5rem;
+}
+
+#contact .title {
+    font-size: 3.5rem;
+}
+
+#contact .section__text {
+    font-size: 1.5rem;
+    color: var(--accent-colour-dark);
+    background-color: var(--accent-colour);
+}
+
+#contact .section__text p {
+    color: var(--accent-colour-dark);
+}
+
 /* FOOTER */
 
 footer {
@@ -404,5 +613,4 @@ footer {
 
 footer p {
     text-align: center;
-    /*color: rgb(34, 216, 240);*/
 }

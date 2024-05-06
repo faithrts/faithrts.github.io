@@ -1,17 +1,4 @@
 /*
-@media screen and (max-width: 1400px) {
-    #profile {
-        height: 83vh;
-        margin-bottom: 6rem;
-    }
-
-    .about-container {
-        flex-wrap: wrap;
-    }
-}
-*/
-
-/*
 First breakpoint:
 - Desktop navigation disappears
 - Hamburger navigation appears
@@ -82,7 +69,7 @@ Second breakpoint:
 
     #experience {
         height: auto;
-        margin-bottom: 8vh;
+        margin-bottom: 15vh;
     }
 
     .section__pic-container-square {
@@ -115,7 +102,7 @@ Third breakpoint:
     
     #about {
         height: auto;
-        margin-bottom: 5vh;
+        margin-bottom: 15vh;
     }
     
     .section__pic-container-square {
@@ -137,6 +124,18 @@ Third breakpoint:
         margin-bottom: 2rem;
     }
 
+    #contact .section__text__p1 {
+        font-size: 1.2rem;
+    }
+    
+    #contact .title {
+        font-size: 3.2rem;
+    }
+    
+    #contact .section__text {
+        font-size: 1.2rem;
+    }
+
     footer p {
         font-size: 0.8rem;
     }
@@ -151,7 +150,7 @@ Fourth breakpoint:
     #hero {
         display: block;
         height: auto;
-        margin-bottom: 5vh;
+        margin-bottom: 15vh;
     }
     
 

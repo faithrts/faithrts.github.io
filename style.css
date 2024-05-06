@@ -18,11 +18,11 @@
     --accent-colour-darkest: #0B336E;
     
     --btn-1: var(--accent-colour);
-    --btn-1-text: var(--accent-colour-light);
+    --btn-1-text: white;
     --btn-1-border: var(--accent-colour);
     --btn-1-hover: var(--accent-colour-darker);
     --btn-1-hover-border: var(--accent-colour-darker);
-    --btn-1-hover-text: white;
+    --btn-1-hover-text: var(--accent-colour-light);
 
     --btn-2-text: var(--accent-colour);
     --btn-2-border: var(--accent-colour-light);
@@ -66,12 +66,6 @@ p {
 p3 {
     color: rgb(153, 153, 153);
 }
-
-/* TODO: figure out how to target a inside li inside class
-.page-link > li a {
-    color: var(--colour-medium);
-}
-*/
 
 /* TRANSITION */
 
@@ -156,7 +150,7 @@ a:hover {
 
 section {
     padding-top: 4vh;
-    height: 96vh;
+    height: auto;
     margin: 0 10rem;
     box-sizing: border-box;
     min-height: fit-content;    /* ensures things are not overlapping */

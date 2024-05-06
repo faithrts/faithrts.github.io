@@ -12,21 +12,21 @@
     --colour-medium: #353535;
     --colour-bold: black;
     --colour-dark: #3c3c3c;
-    --accent-colour: #C4DCFF;
-    --accent-colour-dark: #1665DC;
+    --accent-colour-light: #C4DCFF;
+    --accent-colour: #1665DC;
     --accent-colour-darker: #114CA5;
     --accent-colour-darkest: #0B336E;
     
-    --btn-1: var(--accent-colour-dark);
-    --btn-1-text: var(--accent-colour);
-    --btn-1-border: var(--accent-colour-dark);
+    --btn-1: var(--accent-colour);
+    --btn-1-text: var(--accent-colour-light);
+    --btn-1-border: var(--accent-colour);
     --btn-1-hover: var(--accent-colour-darker);
     --btn-1-hover-border: var(--accent-colour-darker);
     --btn-1-hover-text: white;
 
-    --btn-2-text: var(--accent-colour-dark);
-    --btn-2-border: var(--accent-colour);
-    --btn-2-hover-border: var(--accent-colour-dark);
+    --btn-2-text: var(--accent-colour);
+    --btn-2-border: var(--accent-colour-light);
+    --btn-2-hover-border: var(--accent-colour);
     --btn-2-hover-text: var(--accent-colour-darker);
 
     --title-colour: var(--accent-colour-darkest);
@@ -131,8 +131,8 @@ a {
 }
 
 a:hover {
-    color: var(--accent-colour-dark);
-    background-color: var(--accent-colour);
+    color: var(--accent-colour);
+    background-color: var(--accent-colour-light);
 
     /* underline on hover
     text-decoration: underline;
@@ -230,7 +230,7 @@ The links when the hamburger menu is opened
 }
 
 .menu-links a:hover {
-    color: var(--accent-colour-dark);
+    color: var(--accent-colour);
 }
 
 .menu-links li {
@@ -240,7 +240,7 @@ The links when the hamburger menu is opened
 
 .menu-links.open {
     max-height: 300px;
-    background: var(--accent-colour-dark);
+    background: var(--accent-colour);
 }
 
 /*
@@ -316,7 +316,7 @@ nth-child(2) refers to the second spanned element
 }
 
 #hero h1 {
-    color: var(--accent-colour-dark);
+    color: var(--accent-colour);
 }
 
 #socials-container {
@@ -348,7 +348,7 @@ nth-child(2) refers to the second spanned element
 
 .hero-icon {
     margin-top: 1rem;
-    color: var(--accent-colour);
+    color: var(--accent-colour-light);
 }
 
 .hero-icon:hover {
@@ -357,7 +357,7 @@ nth-child(2) refers to the second spanned element
 
 .ab-icon {
     margin: 1.25rem 0;
-    color: var(--accent-colour-dark);
+    color: var(--accent-colour);
 }
 
 .bullet-icon {
@@ -414,6 +414,7 @@ nth-child(2) refers to the second spanned element
 
 #about {
     position: relative;
+    height: 90vh;
 }
 
 .about-container {
@@ -424,7 +425,6 @@ nth-child(2) refers to the second spanned element
 }
 
 .about-details-container {
-    justify-content: center;
     flex-direction: column;
     display: flex;
 }
@@ -444,12 +444,12 @@ nth-child(2) refers to the second spanned element
 }
 
 .details-container {
-    padding: 1.5rem;
     flex: 1;
-    background: var(--background-lighter);
-    border-radius: 2rem;
-    border: rgb(163, 163, 163) 0.1rem solid;
+    padding: 1.5rem;
     text-align: center;
+    background: var(--background-lighter);
+    border: var(--accent-colour-light) 0.1rem solid;
+    border-radius: 2rem;
 }
 
 .section-container {
@@ -461,7 +461,7 @@ nth-child(2) refers to the second spanned element
     display: flex;
     height: 400px;
     max-width: 600px;
-    margin: auto 0;
+    margin-top: 2rem;
 }
 
 /* EXPERIENCE section */
@@ -478,7 +478,7 @@ nth-child(2) refers to the second spanned element
 
 .experience-sub-title {
     /*color: rgb(85, 85, 85);*/
-    color: var(--accent-colour-dark);
+    color: var(--accent-colour);
     font-weight: 600;
     font-size: 1.75rem;
     margin-bottom: 2rem;
@@ -549,14 +549,13 @@ article {
 }*/
 
 .three-col-item {
-    /* same as "flex-grow: 0;" and "flex-shrink: 0;" and "flex-basis: 33.3333%;" together */
     width: 25%;
     flex-grow: 1;
     padding: 1.5rem;
-    border-radius: 2rem;
-    border: rgb(163, 163, 163) 0.1rem solid;
     text-align: center;
-    background-color: var(--background-lighter);
+    background: var(--background-lighter);
+    border: var(--accent-colour-light) 0.1rem solid;
+    border-radius: 2rem;
 }
 
 .project-container {
@@ -585,7 +584,7 @@ article {
 }
 
 #contact .section__text__p1 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 #contact .title {
@@ -594,12 +593,11 @@ article {
 
 #contact .section__text {
     font-size: 1.5rem;
-    color: var(--accent-colour-dark);
-    background-color: var(--accent-colour);
 }
 
-#contact .section__text p {
-    color: var(--accent-colour-dark);
+.highlight__text {
+    color: var(--accent-colour);
+    background-color: var(--accent-colour-light);
 }
 
 /* FOOTER */

@@ -126,13 +126,15 @@ a {
 
 a:hover {
     color: var(--accent-colour);
-    background-color: var(--accent-colour-light);
 
-    /* underline on hover
-    text-decoration: underline;
-    text-underline-offset: 0.75rem;
-    text-decoration-color: rgb(181, 181, 181);
+    /*
+    background-color: var(--accent-colour-light);
     */
+
+    /* underline on hover */
+    text-decoration: underline;
+    text-underline-offset: 0.25rem;
+    text-decoration-color: var(--accent-colour-light);
 }
 
 .logo {

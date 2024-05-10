@@ -50,6 +50,11 @@ First breakpoint:
     .text-container {
         font-size: 0.9rem;
     }
+
+    a:hover {
+        color: var(--accent-colour);
+        background-color: var(--accent-colour-light);
+    }
 }
 
 /*

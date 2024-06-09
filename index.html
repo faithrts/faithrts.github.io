@@ -15,73 +15,45 @@
 
 <body>
 
-    <nav id="desktop-nav">
-        <div class="logo">
-            <h1>faithrts</h1>
-        </div>
-        <div>
-            <ul class="nav-links page-links">
-                <li><p class="highlight__text">About</p></li>
-                <li><a href="../html/work.html">Work</a></li>
-                <li><a href="../html/play.html">Play</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <nav id="hamburger-nav">
-        <div class="logo">
-            <h1>faithrts</h1>
-        </div>
-        <div class="hamburger-menu">
-            <!-- onclick="toggleMenu()" allows the hamburger to be opened"-->
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <!-- the lines of the hamburger menu-->
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links page-links">
-                <!-- onclick="toggleMenu()" allows the hamburger to be closed"-->
-                <li><p class="highlight__text">About</p></li>
-                <li><a href="../html/work.html" onclick="toggleMenu()">Work</a></li>
-                <li><a href="../html/work.html" onclick="toggleMenu()">Play</a></li>
-            </div>
-        </div>
-    </nav>
-
     <section id="hero">
 
-        <div class="section__pic-container-square">
-            <img 
-                src="../assets/headshot.png"
-                alt="Faith Ruetas profile picture"
-            >
-        </div>
-
-        <div class="section__text">
-            <p class="section__text__p1"> Hello, I'm </p>
-            <h1 class="title"> Faith Ruetas </h1>
-            <p class="section__text__p2"> Developer, writer, researcher </p>
-
-            <div class="btn-container">
-                <!-- window.open("https://webkinz.com") opens the URL in a new browser-->
-                <button class="btn btn-colour-2" onclick="window.open('../assets/resume.pdf')">
-                    Resume
-                </button>
-
-                <!-- location.href = "https://webkinz.com" sets the URL of the current page -->
-                <button class="btn btn-colour-2" onclick="location.href='../#contact'">
-                    Contact
-                </button>
+        <nav id="desktop-nav">
+            <div class="logo">
+                <h1 class="script-writing">Faith Ruetas</h1>
             </div>
-
-            <div id="socials-container">
-                <!-- linkedin icon -->
-                <a href="https://www.linkedin.com/in/faith-ruetas/" target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-linkedin fa-2xl hero-icon"></i> </a>
-                <!-- github ion -->
-                <a href="https://github.com/faithrts" target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-github fa-2xl hero-icon"></i> </a>
+            <div>
+                <ul class="nav-links page-links">
+                    <li><p class="highlight__text">About</p></li>
+                    <li><a href="../html/work.html">Work</a></li>
+                    <li><a href="../html/play.html">Play</a></li>
+                </ul>
             </div>
+        </nav>
+        <nav id="hamburger-nav">
+            <div class="logo">
+                <h1 class="script-writing">Faith Ruetas</h1>
+            </div>
+            <div class="hamburger-menu">
+                <!-- onclick="toggleMenu()" allows the hamburger to be opened"-->
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <!-- the lines of the hamburger menu-->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links page-links">
+                    <!-- onclick="toggleMenu()" allows the hamburger to be closed"-->
+                    <li><p class="highlight__text">About</p></li>
+                    <li><a href="../html/work.html" onclick="toggleMenu()">Work</a></li>
+                    <li><a href="../html/work.html" onclick="toggleMenu()">Play</a></li>
+                </div>
+            </div>
+        </nav>
 
+        <div class="hero-text-container">
+            <div class="section__text">
+                <h1 class="title"> Developer, Researcher, & Writer </h1>
+            </div>
         </div>
 
     </section>

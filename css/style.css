@@ -2,8 +2,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yarndings+12&display=swap');
 
 :root {
+
+    --accent-red: #F90001;
+    --accent-blue: #1665DC;
+    --accent-yellow: #FFBD59;
 
      /* default colour palette */
     --background: #F2F2F2;
@@ -45,6 +50,12 @@
     font-style: normal;
 }
 
+.pixel-symbol {
+    font-family: 'Yarndings 12';
+    font-size: 2em;
+    color: black;
+}
+
 html {
     background-color: var(--background);
 }
@@ -57,6 +68,10 @@ h1 {
     font-family: 'Crimson Text';
     font-style: italic;
     /*color: var(--title-colour);*/
+    font-weight: 400;
+}
+
+h2 {
     font-weight: 400;
 }
 
@@ -124,22 +139,23 @@ rem is like pixels
 }
 
 a {
-    color: var(--colour-medium);
+    /* color: var(--colour-medium); */
+    color: white;
     text-decoration: none;
     text-decoration-color: white;
 }
 
 a:hover {
-    color: var(--accent-colour);
+    color: var(--accent-blue);
 
     /*
     background-color: var(--accent-colour-light);
     */
 
     /* underline on hover */
-    text-decoration: underline;
+    /*text-decoration: underline;
     text-underline-offset: 0.25rem;
-    text-decoration-color: var(--accent-colour-light);
+    text-decoration-color: var(--accent-colour-light);*/
 }
 
 .logo {
@@ -281,6 +297,7 @@ nth-child(2) refers to the second spanned element
 
 #hero {
     /* gap: 5rem; */
+    height: 100vh;
     background-image: url('../assets/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -290,9 +307,10 @@ nth-child(2) refers to the second spanned element
 
 .hero-text-container {
     display: flex;
+    flex-direction: row;
     align-items: center; /* vertical centering if flex-direction: row */
     justify-content: center;
-    height: 75vh;
+    height: 80vh;
     /*display: flex;
     gap: 5rem;
     justify-content: center;*/
@@ -306,8 +324,11 @@ nth-child(2) refers to the second spanned element
     margin: auto 0;
 }
 
-.section__text {
+.centered__text {
+    /* aligns text in the center of grid */
     align-self: center;
+
+    /* centers text */
     text-align: center;
 }
 
@@ -328,12 +349,33 @@ nth-child(2) refers to the second spanned element
     text-align: center;
 }
 
+.hamburger__highlight__text {
+    /*
+    color: var(--accent-colour);
+    background-color: var(--accent-colour-light);
+    */
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--accent-yellow);
+    text-decoration: none;
+}
+
+.highlight__text {
+    /*
+    color: var(--accent-colour);
+    background-color: var(--accent-colour-light);
+    */
+    color: var(--accent-yellow);
+}
+
 #hero h1 {
     color: white;
 }
 
-#hero p {
-    color: white;
+#hero .centered__text {
+    padding-top: 25vh;
 }
 
 #socials-container {
@@ -383,32 +425,29 @@ nth-child(2) refers to the second spanned element
 
 /* BUTTONS */
 
-.btn-container {
+.button-container {
     display: flex;
     justify-content:center;
     margin-bottom: 1.25rem;
 }
 
 .btn {
-    font-weight: 400;
-    transition: all 300ms ease;
-    padding: 1rem;
     width: 8rem;
     border-radius: 2rem;
+    padding: 1rem;
+    transition: all 300ms ease;
     cursor: pointer;
 }
 
 .btn-colour-1 {
-    border: var(--btn-1-border) 0.1rem solid;
-    background: var(--btn-1);
-    /* text colour = white */
-    color: var(--btn-1-text);
+    background: #F5F5F5;
+    border: #C0C0C0 0.1rem solid;
 }
 
 .btn-colour-1:hover {
-    border: var(--btn-1-hover-border) 0.1rem solid;
-    background: var(--btn-1-hover);
-    color: var(--btn-1-hover-text)
+    background: var(--accent-blue);
+    border: white 0.1rem solid;
+    color: white;
 }
 
 .btn-colour-2 {
@@ -435,10 +474,29 @@ nth-child(2) refers to the second spanned element
 }
 
 .about-container {
-    gap: 3rem;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10vh;
+    gap: 5em;
+}
+
+.flowers-container {
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+}
+
+.flower {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-text {
+    align-items: center;
+    margin-left: 5em;
+    margin-right: 5em;
 }
 
 .about-details-container {
@@ -608,13 +666,8 @@ article {
     font-size: 3.5rem;
 }
 
-#contact .section__text {
+#contact .centered__text {
     font-size: 1.5rem;
-}
-
-.highlight__text {
-    color: var(--accent-colour);
-    background-color: var(--accent-colour-light);
 }
 
 /* FOOTER */

@@ -4,60 +4,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yarndings+12&display=swap');
 
-:root {
-
-    --accent-red: #F90001;
-    --accent-blue: #1665DC;
-    --accent-yellow: #FFBD59;
-
-     /* default colour palette */
-    --background: #F2F2F2;
-    --background-lighter: #F5F5F5;
-    --colour-neutral: #C0C0C0;
-    --colour-medium: #353535;
-    --colour-bold: black;
-    --colour-dark: #3c3c3c;
-    --accent-colour-light: #C4DCFF;
-    --accent-colour: #1665DC;
-    --accent-colour-darker: #114CA5;
-    --accent-colour-darkest: #0B336E;
-    
-    --btn-1: var(--accent-colour);
-    --btn-1-text: white;
-    --btn-1-border: var(--accent-colour);
-    --btn-1-hover: var(--accent-colour-darker);
-    --btn-1-hover-border: var(--accent-colour-darker);
-    --btn-1-hover-text: var(--accent-colour-light);
-
-    --btn-2-text: var(--accent-colour);
-    --btn-2-border: var(--accent-colour-light);
-    --btn-2-hover-border: var(--accent-colour);
-    --btn-2-hover-text: var(--accent-colour-darker);
-
-    --title-colour: var(--accent-colour-darkest);
-    --h3-colour: var(--accent-colour-darker);
-}
-
 * {
     margin: 0;
     padding: 0;
 }
 
-.script-writing {
+/* TEXT */
+
+.script-text {
     font-family: 'Reenie Beanie';
     font-size: 1.5em;
     font-weight: 400;
     font-style: normal;
 }
 
+.white-text {
+    color: white;
+}
+
+.red-text {
+    color: var(--accent-red);
+}
+
+.blue-text {
+    color: var(--accent-blue);
+}
+
+.yellow-text {
+    color: var(--accent-yellow);
+}
+
 .pixel-symbol {
     font-family: 'Yarndings 12';
-    font-size: 2em;
-    color: black;
+    font-size: 3em;
 }
+
+/* PAGE BASICS */
 
 html {
     background-color: var(--background);
+    scroll-behavior: smooth;
 }
 
 body {
@@ -73,14 +59,11 @@ h1 {
 
 h2 {
     font-weight: 400;
-}
-
-html {
-    scroll-behavior: smooth;
+    font-size: 1.8em;
 }
 
 p {
-    color: rgb(85, 85, 85);
+    font-size: 1.4em;
 }
 
 p3 {
@@ -100,8 +83,8 @@ a,
 
 /* DESKTOP NAV */
 
-.logo h1 {
-    color: var(--accent-colour);
+.nav__current {
+    font-size: 1em;
 }
 
 /* 
@@ -139,23 +122,22 @@ rem is like pixels
 }
 
 a {
-    /* color: var(--colour-medium); */
-    color: white;
+    color: black;
     text-decoration: none;
-    text-decoration-color: white;
 }
 
 a:hover {
     color: var(--accent-blue);
-
     /*
     background-color: var(--accent-colour-light);
     */
 
     /* underline on hover */
-    /*text-decoration: underline;
+    /*
+    text-decoration: underline;
     text-underline-offset: 0.25rem;
-    text-decoration-color: var(--accent-colour-light);*/
+    text-decoration-color: var(--accent-colour-light);
+    */
 }
 
 .logo {
@@ -172,9 +154,9 @@ a:hover {
 /* SECTIONS in general */
 
 section {
-    padding-top: 4vh;
+    padding: 5vh 0;
     height: auto;
-    margin: 0 10rem;
+    margin: 0 10vw;
     box-sizing: border-box;
     min-height: fit-content;    /* ensures things are not overlapping */
 }
@@ -207,6 +189,7 @@ to select a single, unique element
     height: 24px;
     width: 30px;
     cursor: pointer;
+    color: white;
 }
 
 /*
@@ -215,7 +198,7 @@ Makes the lines of the hamburger menu visible
 .hamburger-icon span {
     width: 100%;
     height: 2px;
-    background-color: black;
+    background-color: var(--accent-blue);
     transition: all 0.3 ease-in-out;
 }
 
@@ -241,9 +224,12 @@ The links when the hamburger menu is opened
     padding: 10px;
     text-align: center;
     font-size: 1.5rem;
-    color: white;
     text-decoration: none;
     transition: all 0.3 ease-in-out;
+}
+
+#hero menu-links a {
+    color: white;
 }
 
 .menu-links a:hover {
@@ -299,6 +285,8 @@ nth-child(2) refers to the second spanned element
     /* gap: 5rem; */
     height: 100vh;
     background-image: url('../assets/background.jpg');
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     margin-left: 0px;
@@ -349,6 +337,17 @@ nth-child(2) refers to the second spanned element
     text-align: center;
 }
 
+.title__hidden {
+    font-size: 3rem;
+    line-height: 110%;
+    margin: 0.5rem;
+    text-align: left;
+}
+
+.page__subtitle {
+    text-align: left;
+}
+
 .hamburger__highlight__text {
     /*
     color: var(--accent-colour);
@@ -378,15 +377,10 @@ nth-child(2) refers to the second spanned element
     padding-top: 25vh;
 }
 
-#socials-container {
+.socials__container {
     display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-    gap: 1rem;
-}
-
-#socials-container a:hover {
-    background-color: transparent;
+    align-items: center;
+    gap: 0.75em;
 }
 
 /* ICONS */
@@ -401,13 +395,10 @@ nth-child(2) refers to the second spanned element
     height: 2rem;
 }
 
-.arrow {
-    cursor: pointer;
-}
-
 .hero-icon {
     margin-top: 1rem;
-    color: var(--accent-colour-light);
+    color: white;
+    align-self: center;
 }
 
 .hero-icon:hover {
@@ -428,7 +419,6 @@ nth-child(2) refers to the second spanned element
 .button-container {
     display: flex;
     justify-content:center;
-    margin-bottom: 1.25rem;
 }
 
 .btn {
@@ -468,17 +458,45 @@ nth-child(2) refers to the second spanned element
 
 /* ABOUT section */
 
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 15vh;
+}
+
+.work-banner {
+    height: 35vh;
+    background-image: url('../assets/background.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.yellow-banner {
+    background-color: var(--accent-yellow);
+}
+
+.banner__text {
+    color: white;
+    font-style: italic;
+    font-size: 2.2rem;
+}
+
 #about {
     position: relative;
-    height: 90vh;
 }
 
 .about-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10vh;
-    gap: 5em;
+    padding: 10vh 10vw;
+    gap: 4em;
 }
 
 .flowers-container {
@@ -495,8 +513,6 @@ nth-child(2) refers to the second spanned element
 
 .about-text {
     align-items: center;
-    margin-left: 5em;
-    margin-right: 5em;
 }
 
 .about-details-container {
@@ -509,19 +525,9 @@ nth-child(2) refers to the second spanned element
     max-width: 375px;
 }
 
-.arrow {
-    /* want to be absolute to the section */
-    position: absolute;
-
-    /* -5 from the rigtht corner, and 2.5 rem up from the bottom */
-    right: -5rem;
-    bottom: 2.5rem;
-}
-
 .details-container {
     flex: 1;
     padding: 1.5rem;
-    text-align: center;
     background: var(--background-lighter);
     border: var(--accent-colour-light) 0.1rem solid;
     border-radius: 2rem;
@@ -559,18 +565,18 @@ nth-child(2) refers to the second spanned element
     margin-bottom: 2rem;
 }
 
-.experience-details-container {
+.experience-container {
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
 }
 
-.article-container {
+.articles-container {
     display: flex;
     text-align: initial;
     flex-wrap: wrap;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 1.5rem;
     justify-content: space-around;
     padding: 0 0 0 1.5rem;
 }
@@ -583,6 +589,12 @@ nth-child(2) refers to the second spanned element
 article {
     display: flex;
     gap: 0.5rem;
+}
+
+#page-hero-nav {
+    /* gap: 5rem; */
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 /* PROJECTS section */
@@ -673,12 +685,23 @@ article {
 /* FOOTER */
 
 footer {
-    height: 10vh;
+    height: 20vh;
     margin: 0;
-    padding-top: 6.5vh;
+    background-color: var(--accent-red);
     /*background-color: rgb(7, 44, 103);*/
+    color: white !important;
 }
 
-footer p {
-    text-align: center;
+.footer__container {
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh; 
 }

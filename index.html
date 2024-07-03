@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faith Ruetas</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/variables.css">
     <link rel="stylesheet" href="../css/mediaqueries.css">
     <link rel="shortcut icon" type="image/png" href="../assets/favicon.ico">
 
@@ -19,19 +20,19 @@
 
         <nav id="desktop-nav">
             <div class="logo">
-                <h1 class="script-writing">Faith Ruetas</h1>
+                <h1 class="script-text">Faith Ruetas</h1>
             </div>
             <div>
                 <ul class="nav-links page-links">
-                    <li><p class="highlight__text">About</p></li>
-                    <li><a href="../html/work.html">Work</a></li>
-                    <li><a href="../html/play.html">Play</a></li>
+                    <li><p class="highlight__text nav__current">About</p></li>
+                    <li><a class="white-text" href="../html/work.html">Work</a></li>
+                    <li><a class="white-text" href="../html/play.html">Play</a></li>
                 </ul>
             </div>
         </nav>
         <nav id="hamburger-nav">
             <div class="logo">
-                <h1 class="script-writing">Faith Ruetas</h1>
+                <h1 class="script-text">Faith Ruetas</h1>
             </div>
             <div class="hamburger-menu">
                 <!-- onclick="toggleMenu()" allows the hamburger to be opened"-->
@@ -56,29 +57,35 @@
 
     </section>
 
+    <div class="banner yellow-banner">
+        <h1 class="banner__text">
+            About me
+        </h1>
+    </div>
+
     <section id="about">
 
         <div class="about-container">
             <div class="flowers-container">
                 <div class="flower">
-                    <p class="pixel-symbol"> f </p>
-                    <h2>BA computer science</h2>
+                    <p class="pixel-symbol yellow-text"> f </p>
+                    <h2 class="centered__text">BA computer science</h2>
                 </div>
                 <div class="flower">
-                    <p class="pixel-symbol"> g </p>
-                    <h2>BA English literature</h2>
+                    <p class="pixel-symbol red-text"> g </p>
+                    <h2 class="centered__text">BA English literature</h2>
                 </div>
             </div>
             <div class="about-text">
                 <p>
-                    I'm passionate about writing, designing, and building projects that 
-                    combine the humane with the power of technology. I believe that our 
-                    work should be a reflection of the reality we hope to bring about, 
+                    I'm passionate about writing, designing, and building in a way that 
+                    combines humane motivations with the power of technology. I believe 
+                    that our work should be a reflection of the reality we hope to bring about, 
                     whether this be through a focus on storytelling or accessibility.
                     <br>
                     <br>
                     Currently, I’m analyzing textual science explainers for their citations 
-                    and identifying characteristics (i.e., compared to short fiction, academic 
+                    and identifying their key characteristics (i.e., compared to short fiction, academic 
                     papers, and news articles) with McGill’s Office of Science Education. 
                 </p>
             </div>
@@ -92,6 +99,7 @@
 
     </section>
 
+    <!--
     <section id="contact">
         
         <p class="section__text__p1"> Interested in my work? </p>
@@ -104,10 +112,23 @@
         
 
     </section>
+    -->
+
 
     <footer>
 
-       <p> Copyright &#169; 2024 Faith Ruetas. All rights reserved. </p>
+        <div class="footer__container">
+
+            <div class="footer__text">
+                <p><i>Contact me at</i></p>
+                <p>faith.ruetas[at]mail.mcgill.ca</p>
+            </div>
+
+            <div class="socials__container">
+                <a href="https://www.linkedin.com/in/faith-ruetas/" target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-linkedin fa-2xl hero-icon"></i> </a>
+                <a href="https://github.com/faithrts" target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-github fa-2xl hero-icon"></i> </a>
+            </div>
+        </div>
 
     </footer>
 

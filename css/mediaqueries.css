@@ -1,192 +1,66 @@
 /*
-First breakpoint:
-- Desktop navigation disappears
-- Hamburger navigation appears
-- Photos and text are scaled down
+first breakpoint
 */
 @media screen and (max-width: 1200px) {
-    /* #hero doesnt have any margin stipulations, but it does have display stipulations */
-    section {
-        margin: 0 10%;
-    }
 
+    /* hides old nav and displays hamburger menu */
     #desktop-nav {
         display: none;
     }
-
     #hamburger-nav {
         display: flex;
     }
-    /*
-    #experience, .experience-details-container {
-        margin-top: 2rem;
-    }
-    */
 
-    #hero {
-        margin: 0px 10rem;
-    }
-
-    #experience {
-        height: 100vh;
-    }
-
-    .about-pic {
-        max-width: 300px;
-    }
-
-    .experience-sub-title {
-        font-size: 1.4rem;
-    }
-    
-    h3 {
-        font-size: 1rem;
-    }
-
-    p3 {
-        font-size: 0.9rem;
-    }
-
-    .text-container {
-        font-size: 0.9rem;
-    }
-
+    /* changes colour of text for hovering over options in hamburger menu */
     a:hover {
         color: var(--accent-colour);
         background-color: var(--accent-colour-light);
     }
-}
 
-/*
-Second breakpoint:
-- Rectangle pic disappears
-*/
-@media screen and (max-width: 840px) {
-
-    #hero {
-        margin: 0 5%;
-        gap: 1rem;
-    }
-
-    #about {
-        height: 80vh;
-    }
-
-    #experience {
-        height: auto;
-        margin-bottom: 15vh;
-    }
-
-    .section__pic-container-square {
-        height: 350px;
-        max-width: 350px;
-    }
-
-    .section__pic-container-rectangle {
-        display: none;
-    }
-
-    .section-container {
-        display: block;
-    }
-
-    .article-container {
-        padding: 0px 0px 0px 1rem;
-    }
-
-    .section__text__p2 {
-        font-size: 1.3rem;
-    }
-}
-
-/*
-Third breakpoint:
-- Block view for everything after hero section
-*/
-@media screen and (max-width: 700px) {
-    
-    #about {
-        height: auto;
-        margin-bottom: 15vh;
-    }
-    
-    .section__pic-container-square {
-        height: 325px;
-        max-width: 325px;
-    }
-
-    .about-container {
-        display: block;
-        margin-bottom: 0;
-    }
-    
-    .details-container {
-        margin-bottom: 2rem;
-    }
-
-    .three-col-item {
-        width: calc(100% - 3rem);
-        margin-bottom: 2rem;
-    }
-
-    #contact .section__text__p1 {
-        font-size: 1.2rem;
-    }
-    
-    #contact .title {
-        font-size: 3.2rem;
-    }
-    
-    #contact .section__text {
-        font-size: 1.2rem;
-    }
-
-    footer p {
-        font-size: 0.8rem;
-    }
-}
-
-/*
-Fourth breakpoint:
-- Block view for hero section
-*/
-@media screen and (max-width: 650px) {
-
-    #hero {
-        display: block;
-        height: auto;
-        margin-bottom: 15vh;
-    }
-    
-
-    .section__pic-container-square {
-        height: 300px;
-        max-width: 300px;
-        margin: auto;
-        margin-bottom: 2rem;
-    }
-
+    /* sizing down text */
     .title {
         font-size: 2.5rem;
     }
-
-    .section__text__p1 {
-        font-size: 0.8rem;
+    .banner__text {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    p {
+        font-size: 1.3em;
     }
 
-    .section__text__p2 {
-        font-size: 1rem;
-    }
 }
 
-@media screen and (max-width: 370px) {
+/*
+second breakpoint
+*/
+@media screen and (max-width: 600px) {
 
-    .section__pic-container-square {
-        height: 250px;
-        max-width: 250px;
+     /* sizing down text */
+    .title {
+        font-size: 2rem;
+    }
+    .banner__text {
+        font-size: 1.75rem;
+    }
+    .script-text {
+        font-size: 1.25em;
+    }
+    h2 {
+        font-size: 1.3em;
+    }
+    p {
+        font-size: 1.1em;
     }
 
-    .section__text__p2 {
-        font-size: 1rem;
+    /* sizing down gaps between elements */
+    .about-container {
+        gap: 2.5em;
+    }
+
+    .flowers-container {
+        gap: 1em;
     }
 }

@@ -1,0 +1,32 @@
+:root {
+    --accent-red: #F90001;
+    --accent-blue: #1665DC;
+    --accent-yellow: #FFBD59;
+
+     /* default colour palette */
+    --background: #F2F2F2;
+    --background-lighter: #F5F5F5;
+    --colour-neutral: #C0C0C0;
+    --colour-medium: #353535;
+    --colour-bold: black;
+    --colour-dark: #3c3c3c;
+    --accent-colour-light: #C4DCFF;
+    --accent-colour: #1665DC;
+    --accent-colour-darker: #114CA5;
+    --accent-colour-darkest: #0B336E;
+    
+    --btn-1: var(--accent-colour);
+    --btn-1-text: white;
+    --btn-1-border: var(--accent-colour);
+    --btn-1-hover: var(--accent-colour-darker);
+    --btn-1-hover-border: var(--accent-colour-darker);
+    --btn-1-hover-text: var(--accent-colour-light);
+
+    --btn-2-text: var(--accent-colour);
+    --btn-2-border: var(--accent-colour-light);
+    --btn-2-hover-border: var(--accent-colour);
+    --btn-2-hover-text: var(--accent-colour-darker);
+
+    --title-colour: var(--accent-colour-darkest);
+    --h3-colour: var(--accent-colour-darker);
+}

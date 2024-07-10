@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faith Ruetas</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaqueries.css">
-    <link rel="shortcut icon" type="image/png" href="assets/favicon.ico">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/mediaqueries.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.ico">
 
     <!-- to include icons from Font Awesome -->
     <script src="https://kit.fontawesome.com/4e32a8e765.js" crossorigin="anonymous"></script>
@@ -15,392 +16,123 @@
 
 <body>
 
-    <nav id="desktop-nav">
-        <div class="logo">
-            <h1>faithrts</h1>
-        </div>
-        <div>
-            <ul class="nav-links page-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <nav id="hamburger-nav">
-        <div class="logo">
-            <h1>faithrts</h1>
-        </div>
-        <div class="hamburger-menu">
-            <!-- onclick="toggleMenu()" allows the hamburger to be opened"-->
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <!-- the lines of the hamburger menu-->
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links page-links">
-                <!-- onclick="toggleMenu()" allows the hamburger to be closed"-->
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#Projects" onclick="toggleMenu()">Projects</a></li>
-            </div>
-        </div>
-    </nav>
-
     <section id="hero">
 
-        <div class="section__pic-container-square">
-            <img 
-                src="./assets/headshot.png"
-                alt="Faith Ruetas profile picture"
-            >
-        </div>
-
-        <div class="section__text">
-            <p class="section__text__p1"> Hello, I'm </p>
-            <h1 class="title"> Faith Ruetas </h1>
-            <p class="section__text__p2"> Developer, writer, researcher </p>
-
-            <div class="btn-container">
-                <!-- window.open("https://webkinz.com") opens the URL in a new browser-->
-                <button class="btn btn-colour-2" onclick="window.open('assets/resume.pdf')">
-                    Resume
-                </button>
-
-                <!-- location.href = "https://webkinz.com" sets the URL of the current page -->
-                <button class="btn btn-colour-2" onclick="location.href='./#contact'">
-                    Contact
-                </button>
+        <nav id="desktop-nav">
+            <div class="logo">
+                <h1 class="script-text">Faith Ruetas</h1>
             </div>
-
-            <div id="socials-container">
-                <!-- linkedin icon -->
-                <a href="https://www.linkedin.com/in/faith-ruetas/" target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-linkedin fa-2xl hero-icon"></i> </a>
-                <!-- github ion -->
-                <a href="https://github.com/faithrts" target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-github fa-2xl hero-icon"></i> </a>
+            <div>
+                <ul class="nav-links page-links">
+                    <li><p class="highlight__text nav__current">About</p></li>
+                    <li><a class="white-text" href="../html/work.html">Work</a></li>
+                    <li><a class="white-text" href="../html/play.html">Play</a></li>
+                </ul>
             </div>
+        </nav>
+        <nav id="hamburger-nav">
+            <div class="logo">
+                <h1 class="script-text">Faith Ruetas</h1>
+            </div>
+            <div class="hamburger-menu">
+                <!-- onclick="toggleMenu()" allows the hamburger to be opened"-->
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <!-- the lines of the hamburger menu-->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links page-links">
+                    <!-- onclick="toggleMenu()" allows the hamburger to be closed"-->
+                    <li><p class="hamburger__highlight__text">About</p></li>
+                    <li><a href="../html/work.html" onclick="toggleMenu()">Work</a></li>
+                    <li><a href="../html/work.html" onclick="toggleMenu()">Play</a></li>
+                </div>
+            </div>
+        </nav>
 
+        <div class="centered__text">
+            <h1 class="title"> Developer, Researcher, & Writer </h1>
         </div>
 
     </section>
+
+    <div class="banner yellow-banner">
+        <h1 class="banner__text">
+            About me
+        </h1>
+    </div>
 
     <section id="about">
 
-        <div class="section__text">
-            <p class="section__text__p1">  A bit </p>
-            <h1 class="title"> About me </h1>
-        </div>
-
-        <div class="section-container">
-
-            <div class="section__pic-container-rectangle">
-                <img 
-                    src="./assets/about-pic.jpg" 
-                    alt="Profile picture"
-                    class="about-pic"
-                >
+        <div class="about-container">
+            <div class="flowers-container">
+                <div class="flower">
+                    <p class="pixel-symbol yellow-text"> f </p>
+                    <h2 class="centered__text">BA computer science</h2>
+                </div>
+                <div class="flower">
+                    <p class="pixel-symbol red-text"> g </p>
+                    <h2 class="centered__text">BA English literature</h2>
+                </div>
             </div>
-
-            <div class="about-details-container">
-
-                <div class="about-container">
-                    <div class="details-container">
-                        <!--
-                        <img 
-                            src="./assets/code.svg" 
-                            alt="experience icon"
-                            class="icon"
-                        >
-                        -->
-                        <i class="fa-solid fa-computer fa-2xl ab-icon"></i>
-
-                        <h3>BA computer science </h3>
-                        <p3> Text mining, dataset creation, data visualization, NLP </p3>
-                    </div>
-
-                    <div class="details-container">
-                        <!--
-                        <img 
-                            src="./assets/pencils.svg" 
-                            alt="education ion"
-                            class="icon"
-                        >
-                        -->
-                        <i class="fa-solid fa-file-pen fa-xl ab-icon"></i>
-
-                        <h3>BA English literature </h3>
-                        <p3> Writing, editing, researching, digital humanities studies </p3>
-                    </div>
-                </div>
-
-                <div class="text-container">
-                    <p> 
-
-                        With a BA in computer science and English literature, I bring
-                        an intersectional perspective geared to multifaceted investigation.
-                        I can write and distill complex ideas;
-                        design and build while keeping an eye on the big picture; 
-                        and ask questions that probe both narrative and knowledge gaps.
-                        Currently, I'm analyzing textual science explainers with 
-                        McGill's Office of Science Education.
-
-                    </p>
-                </div>
-
+            <div class="about-text">
+                <p>
+                    I'm passionate about projects that combine story with purposeful technology.
+                    To this end, I bring an intersectional perspective geared to multifaceted investigation.
+                    I can write and distill complex ideas; design and build while keeping an eye on the 
+                    bigger picture; and ask questions that probe gaps both narrative and knowledge-based.
+                    <br>
+                    <br>
+                    Currently, I’m analyzing textual science explainers for their key characteristics (i.e., compared to short fiction, academic 
+                    papers, and news articles) with Dr. Diane Dechief and McGill’s Office of Science Education. 
+                </p>
+            </div>
+            <div class="button-container">
+                <button class="btn btn-colour-1" onclick="window.open('assets/resume.pdf')">
+                    Resume
+                </button>
             </div>
         </div>
 
-        <!-- arrow to go to the experience section -->
-        <img 
-            src="./assets/down_arrow.png"
-            alt="arrow icon"
-            class="icon arrow"
-            onclick="location.href='./#experience'"
-        >
 
     </section>
 
-    <section id="experience">
-        <p class="section__text__p1"> In brief, my </p>
-        <h1 class="title">Experience</h1>
-        <div class="experience-details-container">
-            <div class="about-container">
-
-                <!-- Technical experience -->
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Programming roles</h2>
-                    <div class="article-container">
-                        <article>
-                            <i class="fa-solid fa-circle fa-2xs bullet-icon"></i>
-                            <div>
-                                <h3> Technical Research Assistant </h3>
-                                <p3> <i>McGill Office of Science Education (OSE)</i> </p3>
-                            </div>
-                        </article>
-
-                        <article>
-                            <i class="fa-solid fa-circle fa-2xs bullet-icon"></i>
-                            <div>
-                                <h3> Backend Developer </h3>
-                                <p3> <i>McGill Hack4Impact</i> </p3>
-                            </div>
-                        </article>
-
-                        <article>
-                            <i class="fa-solid fa-circle fa-2xs bullet-icon"></i>
-                            <div>
-                                <h3> Technical Research Assistant </h3>
-                                <p3> <i>McGill School of Computer Science (SOCS)</i> </p3>
-                            </div>
-                        </article>
-
-                        <article>
-                            <i class="fa-solid fa-circle fa-2xs bullet-icon"></i>
-                            <div>
-                                <h3> Frontend Developer </h3>
-                                <p3> <i>Project: Human City</i> </p3>
-                            </div>
-                        </article>
-                        
-                    </div>
-                </div>
-                <!-- Non-technical experience -->
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Non-programming roles</h2>
-                    <div class="article-container">
-                        <article>
-                            <i class="fa-solid fa-circle fa-2xs bullet-icon"></i>
-                            <div>
-                                <h3> Internal Communications Intern </h3>
-                                <p3> <i>Metso</i> </p3>
-                            </div>
-                        </article>
-
-                        <article>
-                            <i class="fa-solid fa-circle fa-2xs bullet-icon"></i>
-                            <div>
-                                <h3> Co-President </h3>
-                                <p3> <i>McGill Department of English Student Association (DESA)</i> </p3>
-                            </div>
-                        </article>
-
-                        <article>
-                            <i class="fa-solid fa-circle fa-2xs bullet-icon"></i>
-                            <div>
-                                <h3> Technical Writer Intern </h3>
-                                <p3> <i>Unity</i> </p3>
-                            </div>
-                        </article>
-
-                        <article>
-                            <i class="fa-solid fa-circle fa-2xs bullet-icon"></i>
-                            <div>
-                                <h3> Delivery Intern </h3>
-                                <p3> <i>Avanade</i> </p3>
-                            </div>
-                        </article>
-                
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- arrow to go to the projects section -->
-        <img 
-            src="./assets/down_arrow.png"
-            alt="arrow icon"
-            class="icon arrow"
-            onclick="location.href='./#projects'"
-        >
-    </section>
-
-    <section id="projects">
-        <p class="section__text__p1"> Browse my recent </p>
-        <h1 class="title">Projects</h1>
-
-        <div class="experience-details-container">
-            <div class="about-container three-col-container">
-                <!-- project #1 -->
-                <div class="three-col-item">
-                    <div class="project-container">
-                        <img 
-                            src="./assets/dh_event_colour.png"
-                            alt="project 1"
-                            class="project-img"
-                        />
-                    </div>
-                    <h3 class="project-title"> 
-                        DH speaker series
-                    </h3>
-
-                    <p>
-                        Over the course of three sessions, brought together six guest speakers and 60 total 
-                        attendees comprising undergrads, grad students, faculty, and MILA researchers.
-                    </p>
-        
-                    <div class="btn-container">
-                        <button 
-                            class="btn btn-colour-1 project-btn" 
-                            onclick="window.open('https://drive.google.com/drive/folders/1p1Kfw1fB_9f4ZNBXsRkPMJ-M4ZiFmtkS?usp=sharing')">
-                            Materials
-                        </button>
-                    </div>
-                </div>
-
-                <!-- project #2 -->
-                <div class="three-col-item">
-                    <div class="project-container">
-                        <img 
-                            src="./assets/semaxis.png"
-                            alt="project 2"
-                            class="project-img"
-                        />
-                    </div>
-                    <h3 class="project-title"> 
-                        Culture-oriented NLP
-                    </h3>
-
-                    <p>
-                        Using word embeddings, compared protagonist word associations in book reviews on female-led versus male-led Young Adult novels to explore reader gender bias.
-                    </p>
-        
-                    <div class="btn-container">
-                        <button 
-                            class="btn btn-colour-1 project-btn"  
-                            onclick="window.open('https://github.com/luca2618/COMP550_project')" 
-                            target="_blank">
-                            Github
-                        </button>
-                    </div>
-                </div>
-
-                <!-- project #3 -->
-                <div class="three-col-item">
-                    <div class="project-container">
-                        <img 
-                            src="./assets/aqaadi_rounded.png"
-                            alt="project 3"
-                            class="project-img"
-                        />
-                    </div>
-                    <h3 class="project-title"> 
-                        Data storytelling
-                    </h3>
-
-                    <p>
-                        Processed survey responses from Montreal lawyers, worked with legal clinic to create fictional migrant profiles, and calculated each profile's likelihood of receiving legal aid.
-                    </p>
-        
-                    <div class="btn-container">
-                        <button 
-                            class="btn btn-colour-1 project-btn" 
-                            onclick="window.open('assets/aqaadi_report.pdf')">
-                            Report
-                        </button>
-                    </div>
-                </div>
-
-                <!-- project #4 -->
-                <div class="three-col-item">
-                    <!--
-                    <div class="project-container">
-                        <img 
-                            src="./assets/"
-                            alt="project 4"
-                            class="project-img"
-                        />
-                    </div>
-                    -->
-                    <h3 class="project-title"> 
-                        ML fundamentals 
-                    </h3>
-
-                    <p>
-                        Implemented K-Nearest Neighbours, Decision Tree, Logistic + Multi-class Regression, and Multi-layer Perceptron models from scratch to classify textual, numerical, and image-based data.
-                    </p>
-        
-                    <div class="btn-container">
-                        <button 
-                            class="btn btn-colour-1 project-btn" 
-                            onclick="window.open('https://github.com/faithrts/ML-Intro')">
-                            Github
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- arrow to go to the contact section -->
-        <img 
-            src="./assets/down_arrow.png"
-            alt="arrow icon"
-            class="icon arrow"
-            onclick="location.href='./#contact'"
-        >
-    </section>
-
+    <!--
     <section id="contact">
         
         <p class="section__text__p1"> Interested in my work? </p>
 
         <h1 class="title"> Let's connect! </h1>
 
-        <div class="section__text"> 
+        <div class="centered__text"> 
             <p class="highlight__text"> faith.ruetas[at]mail.mcgill.ca </p>
          </div>
         
 
     </section>
+    -->
+
 
     <footer>
 
-       <p> Copyright &#169; 2024 Faith Ruetas. All rights reserved. </p>
+        <div class="footer__container">
+
+            <div class="footer__text">
+                <p><i>Let's connect</i></p>
+                <p>faith.ruetas[at]mail.mcgill.ca</p>
+            </div>
+
+            <div class="socials__container">
+                <a href="https://www.linkedin.com/in/faith-ruetas/" target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-linkedin fa-2xl hero-icon"></i> </a>
+                <a href="https://github.com/faithrts" target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-github fa-2xl hero-icon"></i> </a>
+            </div>
+        </div>
 
     </footer>
 
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
+
 </body>
 
 </html>

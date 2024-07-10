@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/mediaqueries.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.ico">
+
+    <!-- to include icons from Font Awesome -->
+    <script src="https://kit.fontawesome.com/4e32a8e765.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <section id="page-hero-nav">
+        <nav id="desktop-nav">
+            <div class="logo">
+                <h1 class="script-text">Faith Ruetas</h1>
+            </div>
+            <div>
+                <ul class="nav-links page-links">
+                    <li><a href="../index.html">About</a></li>
+                    <li><a href="../html/work.html">Work</a></li>
+                    <li><p class="highlight__text nav__current">Play</p></li>
+                </ul>
+            </div>
+        </nav>
+        <nav id="hamburger-nav">
+            <div class="logo">
+                <h1 class="script-text">Faith Ruetas</h1>
+            </div>
+            <div class="hamburger-menu">
+                <!-- onclick="toggleMenu()" allows the hamburger to be opened"-->
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <!-- the lines of the hamburger menu-->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links page-links">
+                    <!-- onclick="toggleMenu()" allows the hamburger to be closed"-->
+                    <li><a href="../index.html" onclick="toggleMenu()">About</a></li>
+                    <li><a href="../html/work.html" onclick="toggleMenu()">Work</a></li>
+                    <li><p class="hamburger__highlight__text">Play</p></li>
+                </div>
+            </div>
+        </nav>
+        <div class="banner work-banner">
+        </div>
+    </section>
+
+    <section id="fun-projects">
+        
+        <div class="three-col-container">
+            <!-- project #1 -->
+            <div class="three-col-item">
+                <div class="project-container">
+                    <img 
+                        src="../assets/play/tongue_books.png"
+                        alt="project 1"
+                        class="play-img"
+                    />
+                </div>
+                <h3 class="project-title"> 
+                    "Tongue in Cheek"
+                </h3>
+
+                <p>
+                    Academic essay tracking the tongue 
+                    from autobiographical slave narratives 
+                    to contemporary ones.
+
+                </p>
+    
+                <div class="btn-container">
+                    <button 
+                        class="btn btn-colour-1 project-btn" 
+                        onclick="window.open('https://mcgillchannelundergraduatereview.com/2024/03/tongue-in-cheek-from-the-metaphor-to-the-literal/')">
+                        <it>The Channel</it>
+                    </button>
+                </div>
+            </div>
+
+            <!-- project #2 -->
+            <div class="three-col-item">
+                <div class="project-container">
+                    <img 
+                        src="../assets/play/bush_lily.png"
+                        alt="project 2"
+                        class="play-img"
+                    />
+                </div>
+                <h3 class="project-title"> 
+                    "公公"
+                </h3>
+
+                <p>
+                    Personal poem about intra-familial communication within a
+                    multi-generational immigrant family.
+                </p>
+    
+                <div class="btn-container">
+                    <button 
+                        class="btn btn-colour-1 project-btn"  
+                        onclick="window.open('https://theimagist.wixsite.com/theimagist/archive')" 
+                        target="_blank">
+                        <it>The Imagist</it>
+                    </button>
+                </div>
+            </div>
+
+            <!-- project #3 -->
+            <div class="three-col-item">
+                <div class="project-container">
+                    <img 
+                        src="../assets/play/pendant.png"
+                        alt="project 3"
+                        class="play-img"
+                    />
+                </div>
+                <h3 class="project-title"> 
+                    "With Those We Love Gone"
+                </h3>
+
+                <p>
+                    Hypertext visual novel that traces the past choices and missed opportunities of an unnamed protagonist. Made with Twine!
+                </p>
+    
+                <div class="btn-container">
+                    <button 
+                        class="btn btn-colour-1 project-btn disabled-btn" 
+                        onclick="window.open('assets/aqaadi_report.pdf')">
+                        Coming soon
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+
+        <div class="footer__container">
+
+            <div class="footer__text">
+                <p><i>Let's connect</i></p>
+                <p>faith.ruetas[at]mail.mcgill.ca</p>
+            </div>
+
+            <div class="socials__container">
+                <a href="https://www.linkedin.com/in/faith-ruetas/" target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-linkedin fa-2xl hero-icon"></i> </a>
+                <a href="https://github.com/faithrts" target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-github fa-2xl hero-icon"></i> </a>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="../script.js"></script>
+    
+</body>
+
+</html>

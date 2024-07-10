@@ -1,70 +1,79 @@
 /* GENERAL */
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
-
-:root {
-
-     /* default colour palette */
-    --background: #F2F2F2;
-    --background-lighter: #F5F5F5;
-    --colour-neutral: #C0C0C0;
-    --colour-medium: #353535;
-    --colour-bold: black;
-    --colour-dark: #3c3c3c;
-    --accent-colour-light: #C4DCFF;
-    --accent-colour: #1665DC;
-    --accent-colour-darker: #114CA5;
-    --accent-colour-darkest: #0B336E;
-    
-    --btn-1: var(--accent-colour);
-    --btn-1-text: white;
-    --btn-1-border: var(--accent-colour);
-    --btn-1-hover: var(--accent-colour-darker);
-    --btn-1-hover-border: var(--accent-colour-darker);
-    --btn-1-hover-text: var(--accent-colour-light);
-
-    --btn-2-text: var(--accent-colour);
-    --btn-2-border: var(--accent-colour-light);
-    --btn-2-hover-border: var(--accent-colour);
-    --btn-2-hover-text: var(--accent-colour-darker);
-
-    --title-colour: var(--accent-colour-darkest);
-    --h3-colour: var(--accent-colour-darker);
-}
+@import url('https://fonts.googleapis.com/css2?family=Yarndings+12&display=swap');
 
 * {
     margin: 0;
     padding: 0;
 }
 
+/* TEXT */
+
+.script-text {
+    font-family: 'Reenie Beanie';
+    font-size: 1.5em;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.white-text {
+    color: white;
+}
+
+.red-text {
+    color: var(--accent-red);
+}
+
+.blue-text {
+    color: var(--accent-blue);
+}
+
+.yellow-text {
+    color: var(--accent-yellow);
+}
+
+.grey-text {
+    color: rgb(153, 153, 153);
+}
+
+.pixel-symbol {
+    font-family: 'Yarndings 12';
+    font-size: 3em;
+}
+
+.pixel-bullet {
+    font-family: 'Yarndings 12';
+    font-size: 2.3em;
+    margin: 0 0.9rem 0 0rem;
+}
+
+/* PAGE BASICS */
+
 html {
     background-color: var(--background);
-}
-
-body {
-    font-family: 'Space Mono';
-}
-
-h1 {
-    font-family: 'Reenie Beanie';
-    color: var(--title-colour);
-}
-
-h3 {
-    color: var(--h3-colour);
-}
-
-html {
     scroll-behavior: smooth;
 }
 
-p {
-    color: rgb(85, 85, 85);
+body {
+    font-family: 'Crimson Text';
 }
 
-p3 {
-    color: rgb(153, 153, 153);
+h1 {
+    font-family: 'Crimson Text';
+    font-style: italic;
+    /*color: var(--title-colour);*/
+    font-weight: 400;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1.8em;
+}
+
+p {
+    font-size: 1.4em;
 }
 
 /* TRANSITION */
@@ -80,8 +89,8 @@ a,
 
 /* DESKTOP NAV */
 
-.logo h1 {
-    color: var(--accent-colour);
+.nav__current {
+    font-size: 1em;
 }
 
 /* 
@@ -119,19 +128,21 @@ rem is like pixels
 }
 
 a {
-    color: var(--colour-medium);
+    color: black;
     text-decoration: none;
-    text-decoration-color: white;
 }
 
 a:hover {
-    color: var(--accent-colour);
+    color: var(--accent-blue);
+    /*
     background-color: var(--accent-colour-light);
+    */
 
-    /* underline on hover
+    /* underline on hover */
+    /*
     text-decoration: underline;
-    text-underline-offset: 0.75rem;
-    text-decoration-color: rgb(181, 181, 181);
+    text-underline-offset: 0.25rem;
+    text-decoration-color: var(--accent-colour-light);
     */
 }
 
@@ -149,9 +160,9 @@ a:hover {
 /* SECTIONS in general */
 
 section {
-    padding-top: 4vh;
+    padding: 5vh 0;
     height: auto;
-    margin: 0 10rem;
+    margin: 0 10vw;
     box-sizing: border-box;
     min-height: fit-content;    /* ensures things are not overlapping */
 }
@@ -184,6 +195,7 @@ to select a single, unique element
     height: 24px;
     width: 30px;
     cursor: pointer;
+    color: white;
 }
 
 /*
@@ -192,7 +204,7 @@ Makes the lines of the hamburger menu visible
 .hamburger-icon span {
     width: 100%;
     height: 2px;
-    background-color: black;
+    background-color: var(--accent-blue);
     transition: all 0.3 ease-in-out;
 }
 
@@ -218,9 +230,12 @@ The links when the hamburger menu is opened
     padding: 10px;
     text-align: center;
     font-size: 1.5rem;
-    color: white;
     text-decoration: none;
     transition: all 0.3 ease-in-out;
+}
+
+#hero menu-links a {
+    color: white;
 }
 
 .menu-links a:hover {
@@ -273,10 +288,26 @@ nth-child(2) refers to the second spanned element
 /* HERO SECTION */
 
 #hero {
+    /* gap: 5rem; */
+    height: 100vh;
+    background-image: url('../assets/background.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.hero-text-container {
     display: flex;
+    flex-direction: row;
+    align-items: center; /* vertical centering if flex-direction: row */
     justify-content: center;
-    gap: 5rem;
     height: 80vh;
+    /*display: flex;
+    gap: 5rem;
+    justify-content: center;*/
 }
 
 /* the headshot */
@@ -287,14 +318,17 @@ nth-child(2) refers to the second spanned element
     margin: auto 0;
 }
 
-.section__text {
+.centered__text {
+    /* aligns text in the center of grid */
     align-self: center;
+
+    /* centers text */
     text-align: center;
 }
 
 .section__text__p1 {
     text-align: center; /* this is not needed */
-    font-weight: 600;
+    font-weight: 400;
  }
 
 .section__text__p2 {
@@ -309,19 +343,50 @@ nth-child(2) refers to the second spanned element
     text-align: center;
 }
 
-#hero h1 {
+.title__hidden {
+    font-size: 3rem;
+    line-height: 110%;
+    margin: 0.5rem;
+    text-align: left;
+}
+
+.page__subtitle {
+    text-align: left;
+}
+
+.hamburger__highlight__text {
+    /*
     color: var(--accent-colour);
+    background-color: var(--accent-colour-light);
+    */
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--accent-yellow);
+    text-decoration: none;
 }
 
-#socials-container {
+.highlight__text {
+    /*
+    color: var(--accent-colour);
+    background-color: var(--accent-colour-light);
+    */
+    color: var(--accent-yellow);
+}
+
+#hero h1 {
+    color: white;
+}
+
+#hero .centered__text {
+    padding-top: 25vh;
+}
+
+.socials__container {
     display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-    gap: 1rem;
-}
-
-#socials-container a:hover {
-    background-color: transparent;
+    align-items: center;
+    gap: 0.75em;
 }
 
 /* ICONS */
@@ -336,13 +401,10 @@ nth-child(2) refers to the second spanned element
     height: 2rem;
 }
 
-.arrow {
-    cursor: pointer;
-}
-
 .hero-icon {
     margin-top: 1rem;
-    color: var(--accent-colour-light);
+    color: white;
+    align-self: center;
 }
 
 .hero-icon:hover {
@@ -358,34 +420,37 @@ nth-child(2) refers to the second spanned element
     margin: 0.8rem 1rem 0 0.2rem;
 }
 
+.hover-bullet:hover, bullet-icon {
+    display: none;
+}
+.hover-bullet:hover, .pixel-symbol {
+    display: inline;
+}
+
 /* BUTTONS */
 
-.btn-container {
+.button-container {
     display: flex;
     justify-content:center;
-    margin-bottom: 1.25rem;
 }
 
 .btn {
-    font-weight: 600;
-    transition: all 300ms ease;
-    padding: 1rem;
     width: 8rem;
     border-radius: 2rem;
+    padding: 1rem;
+    transition: all 300ms ease;
     cursor: pointer;
 }
 
 .btn-colour-1 {
-    border: var(--btn-1-border) 0.1rem solid;
-    background: var(--btn-1);
-    /* text colour = white */
-    color: var(--btn-1-text);
+    background: #F5F5F5;
+    border: #C0C0C0 0.1rem solid;
 }
 
 .btn-colour-1:hover {
-    border: var(--btn-1-hover-border) 0.1rem solid;
-    background: var(--btn-1-hover);
-    color: var(--btn-1-hover-text)
+    background: var(--accent-blue);
+    border: white 0.1rem solid;
+    color: white;
 }
 
 .btn-colour-2 {
@@ -406,16 +471,61 @@ nth-child(2) refers to the second spanned element
 
 /* ABOUT section */
 
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 15vh;
+}
+
+.work-banner {
+    height: 35vh;
+    background-image: url('../assets/background.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.yellow-banner {
+    background-color: var(--accent-yellow);
+}
+
+.banner__text {
+    color: white;
+    font-style: italic;
+    font-size: 2.2rem;
+}
+
 #about {
     position: relative;
-    height: 90vh;
 }
 
 .about-container {
-    gap: 3rem;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10vh 10vw;
+    gap: 4em;
+}
+
+.flowers-container {
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+}
+
+.flower {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-text {
+    align-items: center;
 }
 
 .about-details-container {
@@ -428,22 +538,13 @@ nth-child(2) refers to the second spanned element
     max-width: 375px;
 }
 
-.arrow {
-    /* want to be absolute to the section */
-    position: absolute;
-
-    /* -5 from the rigtht corner, and 2.5 rem up from the bottom */
-    right: -5rem;
-    bottom: 2.5rem;
-}
-
 .details-container {
     flex: 1;
+    /*
     padding: 1.5rem;
-    text-align: center;
     background: var(--background-lighter);
     border: var(--accent-colour-light) 0.1rem solid;
-    border-radius: 2rem;
+    border-radius: 2rem;*/
 }
 
 .section-container {
@@ -467,29 +568,28 @@ nth-child(2) refers to the second spanned element
     element with position: relative */
     position: relative;
     height: auto;
-    margin-bottom: 3rem;
+    margin: 0 18vw 8vh 18vw;
 }
 
 .experience-sub-title {
-    /*color: rgb(85, 85, 85);*/
-    color: var(--accent-colour);
-    font-weight: 600;
+    font-weight: 400;
     font-size: 1.75rem;
     margin-bottom: 2rem;
 }
 
-.experience-details-container {
+.experience-container {
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 10vw;
 }
 
-.article-container {
+.articles-container {
     display: flex;
     text-align: initial;
     flex-wrap: wrap;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 1.5rem;
     justify-content: space-around;
     padding: 0 0 0 1.5rem;
 }
@@ -504,6 +604,18 @@ article {
     gap: 0.5rem;
 }
 
+article:hover {
+    color: var(--accent-blue);
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+#page-hero-nav {
+    /* gap: 5rem; */
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
 /* PROJECTS section */
 
 #projects {
@@ -513,9 +625,13 @@ article {
 }
 
 .project-img {
-    border-radius: 2rem;
     width: 100%;
     height: 100%;
+}
+
+.play-img {
+    border-radius: 2rem;
+    max-height: 250px;
 }
 
 .project-title {
@@ -523,6 +639,9 @@ article {
 }
 
 .three-col-container {
+    gap: 3rem;
+    margin: 5vh 0 10vh 0;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     /*
@@ -547,9 +666,11 @@ article {
     flex-grow: 1;
     padding: 1.5rem;
     text-align: center;
+    /*
     background: var(--background-lighter);
     border: var(--accent-colour-light) 0.1rem solid;
     border-radius: 2rem;
+    */
 }
 
 .project-container {
@@ -559,10 +680,15 @@ article {
     flex-direction: column;
     gap: 2.5rem;
     justify-content: space-around;
+    align-items: center;
 }
 
 .project-btn {
     margin-top: 1.75rem;
+}
+
+.disabled-btn {
+    pointer-events: none;
 }
 
 /* CONTACT section */
@@ -585,24 +711,30 @@ article {
     font-size: 3.5rem;
 }
 
-#contact .section__text {
+#contact .centered__text {
     font-size: 1.5rem;
-}
-
-.highlight__text {
-    color: var(--accent-colour);
-    background-color: var(--accent-colour-light);
 }
 
 /* FOOTER */
 
 footer {
-    height: 10vh;
+    height: 20vh;
     margin: 0;
-    padding-top: 6.5vh;
+    background-color: var(--accent-red);
     /*background-color: rgb(7, 44, 103);*/
+    color: white !important;
 }
 
-footer p {
-    text-align: center;
+.footer__container {
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh; 
 }

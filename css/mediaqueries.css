@@ -1,0 +1,79 @@
+/*
+first breakpoint
+*/
+@media screen and (max-width: 1200px) {
+
+    /* hides old nav and displays hamburger menu */
+    #desktop-nav {
+        display: none;
+    }
+    #hamburger-nav {
+        display: flex;
+    }
+
+    /* changes colour of text for hovering over options in hamburger menu */
+    a:hover {
+        color: var(--accent-colour);
+        background-color: var(--accent-colour-light);
+    }
+
+    /* sizing down text */
+    .title {
+        font-size: 2.5rem;
+    }
+    .banner__text {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    p {
+        font-size: 1.3em;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    /* turns column view into rows */
+    .three-col-container {
+        display: block;
+    }
+    .experience-container {
+        flex-direction: column;
+        gap: 10vh;
+    }
+
+    /* ensures each item is pretty wide, reduces bottom margin */
+    .three-col-item {
+        width: calc(100% - 3rem);
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+     /* sizing down text */
+    .title {
+        font-size: 2rem;
+    }
+    .banner__text {
+        font-size: 1.75rem;
+    }
+    .script-text {
+        font-size: 1.25em;
+    }
+    h2 {
+        font-size: 1.3em;
+    }
+    p {
+        font-size: 1.1em;
+    }
+
+    /* sizing down gaps between elements */
+    .about-container {
+        gap: 2.5em;
+    }
+    .flowers-container {
+        gap: 1em;
+    }
+}

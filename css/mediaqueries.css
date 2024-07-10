@@ -33,9 +33,23 @@ first breakpoint
 
 }
 
-/*
-second breakpoint
-*/
+@media screen and (max-width: 700px) {
+    /* turns column view into rows */
+    .three-col-container {
+        display: block;
+    }
+    .experience-container {
+        flex-direction: column;
+        gap: 10vh;
+    }
+
+    /* ensures each item is pretty wide, reduces bottom margin */
+    .three-col-item {
+        width: calc(100% - 3rem);
+        margin-bottom: 2rem;
+    }
+}
+
 @media screen and (max-width: 600px) {
 
      /* sizing down text */
@@ -59,7 +73,6 @@ second breakpoint
     .about-container {
         gap: 2.5em;
     }
-
     .flowers-container {
         gap: 1em;
     }

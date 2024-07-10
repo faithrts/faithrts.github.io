@@ -34,9 +34,19 @@
     color: var(--accent-yellow);
 }
 
+.grey-text {
+    color: rgb(153, 153, 153);
+}
+
 .pixel-symbol {
     font-family: 'Yarndings 12';
     font-size: 3em;
+}
+
+.pixel-bullet {
+    font-family: 'Yarndings 12';
+    font-size: 2.3em;
+    margin: 0 0.9rem 0 0rem;
 }
 
 /* PAGE BASICS */
@@ -64,10 +74,6 @@ h2 {
 
 p {
     font-size: 1.4em;
-}
-
-p3 {
-    color: rgb(153, 153, 153);
 }
 
 /* TRANSITION */
@@ -414,6 +420,13 @@ nth-child(2) refers to the second spanned element
     margin: 0.8rem 1rem 0 0.2rem;
 }
 
+.hover-bullet:hover, bullet-icon {
+    display: none;
+}
+.hover-bullet:hover, .pixel-symbol {
+    display: inline;
+}
+
 /* BUTTONS */
 
 .button-container {
@@ -527,10 +540,11 @@ nth-child(2) refers to the second spanned element
 
 .details-container {
     flex: 1;
+    /*
     padding: 1.5rem;
     background: var(--background-lighter);
     border: var(--accent-colour-light) 0.1rem solid;
-    border-radius: 2rem;
+    border-radius: 2rem;*/
 }
 
 .section-container {
@@ -554,12 +568,10 @@ nth-child(2) refers to the second spanned element
     element with position: relative */
     position: relative;
     height: auto;
-    margin-bottom: 3rem;
+    margin: 0 18vw 8vh 18vw;
 }
 
 .experience-sub-title {
-    /*color: rgb(85, 85, 85);*/
-    color: var(--accent-colour);
     font-weight: 400;
     font-size: 1.75rem;
     margin-bottom: 2rem;
@@ -569,6 +581,7 @@ nth-child(2) refers to the second spanned element
     display: flex;
     justify-content: center;
     flex-direction: row;
+    gap: 10vw;
 }
 
 .articles-container {
@@ -591,6 +604,12 @@ article {
     gap: 0.5rem;
 }
 
+article:hover {
+    color: var(--accent-blue);
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
 #page-hero-nav {
     /* gap: 5rem; */
     margin-left: 0px;
@@ -606,9 +625,13 @@ article {
 }
 
 .project-img {
-    border-radius: 2rem;
     width: 100%;
     height: 100%;
+}
+
+.play-img {
+    border-radius: 2rem;
+    max-height: 250px;
 }
 
 .project-title {
@@ -616,6 +639,9 @@ article {
 }
 
 .three-col-container {
+    gap: 3rem;
+    margin: 5vh 0 10vh 0;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     /*
@@ -640,9 +666,11 @@ article {
     flex-grow: 1;
     padding: 1.5rem;
     text-align: center;
+    /*
     background: var(--background-lighter);
     border: var(--accent-colour-light) 0.1rem solid;
     border-radius: 2rem;
+    */
 }
 
 .project-container {
@@ -652,10 +680,15 @@ article {
     flex-direction: column;
     gap: 2.5rem;
     justify-content: space-around;
+    align-items: center;
 }
 
 .project-btn {
     margin-top: 1.75rem;
+}
+
+.disabled-btn {
+    pointer-events: none;
 }
 
 /* CONTACT section */

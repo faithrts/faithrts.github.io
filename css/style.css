@@ -442,6 +442,10 @@ nth-child(2) refers to the second spanned element
     cursor: pointer;
 }
 
+.btn-wide {
+    width: 10rem;
+}
+
 .btn-colour-1 {
     background: #F5F5F5;
     border: #C0C0C0 0.1rem solid;
@@ -584,7 +588,7 @@ nth-child(2) refers to the second spanned element
     gap: 10vw;
 }
 
-.articles-container {
+.experience-list {
     display: flex;
     text-align: initial;
     flex-wrap: wrap;
@@ -594,21 +598,21 @@ nth-child(2) refers to the second spanned element
     padding: 0 0 0 1.5rem;
 }
 
-.section__text__italic {
-    font-style: italic;
-    color: rgb(153, 153, 153);
- }
-
-article {
+.experience-list-item {
     display: flex;
     gap: 0.5rem;
 }
 
-article:hover {
+.experience-list-item:hover {
     color: var(--accent-blue);
     cursor: pointer;
     transition: all 300ms ease;
 }
+
+.section__text__italic {
+    font-style: italic;
+    color: rgb(153, 153, 153);
+ }
 
 #page-hero-nav {
     /* gap: 5rem; */
@@ -630,7 +634,6 @@ article:hover {
 }
 
 .play-img {
-    border-radius: 2rem;
     max-height: 250px;
 }
 

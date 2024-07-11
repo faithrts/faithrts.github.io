@@ -226,6 +226,7 @@ The links when the hamburger menu is opened
 }
 
 .menu-links a {
+    color: white;
     display: block;
     padding: 10px;
     text-align: center;
@@ -629,6 +630,7 @@ nth-child(2) refers to the second spanned element
 }
 
 .project-img {
+    object-fit: cover;
     width: 100%;
     height: 100%;
 }

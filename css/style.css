@@ -43,6 +43,12 @@
     font-size: 3em;
 }
 
+.pixel-symbol-bullet {
+    font-family: 'Yarndings 12';
+    font-size: 1.25em;
+    margin: 0.1rem 0.7rem 0 0.1rem;
+}
+
 .pixel-bullet {
     font-family: 'Yarndings 12';
     font-size: 2.3em;
@@ -85,6 +91,11 @@ class attribute
 a, 
 .btn {
     transition: all 300ms ease;
+}
+
+
+a:hover {
+    color: var(--accent-blue);
 }
 
 /* DESKTOP NAV */
@@ -130,20 +141,6 @@ rem is like pixels
 a {
     color: black;
     text-decoration: none;
-}
-
-a:hover {
-    color: var(--accent-blue);
-    /*
-    background-color: var(--accent-colour-light);
-    */
-
-    /* underline on hover */
-    /*
-    text-decoration: underline;
-    text-underline-offset: 0.25rem;
-    text-decoration-color: var(--accent-colour-light);
-    */
 }
 
 .logo {
@@ -239,9 +236,10 @@ The links when the hamburger menu is opened
     color: white;
 }
 
+/*
 .menu-links a:hover {
     color: var(--accent-colour);
-}
+}*/
 
 .menu-links li {
     /* Removes bullet points */
@@ -251,6 +249,10 @@ The links when the hamburger menu is opened
 .menu-links.open {
     max-height: 300px;
     background: var(--accent-colour);
+}
+
+.hide-item {
+    display: none;
 }
 
 /*
@@ -419,13 +421,6 @@ nth-child(2) refers to the second spanned element
 
 .bullet-icon {
     margin: 0.8rem 1rem 0 0.2rem;
-}
-
-.hover-bullet:hover, bullet-icon {
-    display: none;
-}
-.hover-bullet:hover, .pixel-symbol {
-    display: inline;
 }
 
 /* BUTTONS */
@@ -605,8 +600,8 @@ nth-child(2) refers to the second spanned element
 }
 
 .experience-list-item:hover {
-    color: var(--accent-blue);
-    cursor: pointer;
+    /*color: var(--accent-blue);*/
+    /*cursor: pointer;*/
     transition: all 300ms ease;
 }
 

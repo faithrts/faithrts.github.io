@@ -43,6 +43,12 @@
     font-size: 3em;
 }
 
+.pixel-symbol-bullet {
+    font-family: 'Yarndings 12';
+    font-size: 1.25em;
+    margin: 0.1rem 0.7rem 0 0.1rem;
+}
+
 .pixel-bullet {
     font-family: 'Yarndings 12';
     font-size: 2.3em;
@@ -85,6 +91,11 @@ class attribute
 a, 
 .btn {
     transition: all 300ms ease;
+}
+
+
+a:hover {
+    color: var(--accent-blue);
 }
 
 /* DESKTOP NAV */
@@ -130,20 +141,6 @@ rem is like pixels
 a {
     color: black;
     text-decoration: none;
-}
-
-a:hover {
-    color: var(--accent-blue);
-    /*
-    background-color: var(--accent-colour-light);
-    */
-
-    /* underline on hover */
-    /*
-    text-decoration: underline;
-    text-underline-offset: 0.25rem;
-    text-decoration-color: var(--accent-colour-light);
-    */
 }
 
 .logo {
@@ -226,6 +223,7 @@ The links when the hamburger menu is opened
 }
 
 .menu-links a {
+    color: white;
     display: block;
     padding: 10px;
     text-align: center;
@@ -238,9 +236,10 @@ The links when the hamburger menu is opened
     color: white;
 }
 
+/*
 .menu-links a:hover {
     color: var(--accent-colour);
-}
+}*/
 
 .menu-links li {
     /* Removes bullet points */
@@ -250,6 +249,10 @@ The links when the hamburger menu is opened
 .menu-links.open {
     max-height: 300px;
     background: var(--accent-colour);
+}
+
+.hide-item {
+    display: none;
 }
 
 /*
@@ -420,13 +423,6 @@ nth-child(2) refers to the second spanned element
     margin: 0.8rem 1rem 0 0.2rem;
 }
 
-.hover-bullet:hover, bullet-icon {
-    display: none;
-}
-.hover-bullet:hover, .pixel-symbol {
-    display: inline;
-}
-
 /* BUTTONS */
 
 .button-container {
@@ -440,6 +436,10 @@ nth-child(2) refers to the second spanned element
     padding: 1rem;
     transition: all 300ms ease;
     cursor: pointer;
+}
+
+.btn-wide {
+    width: 10rem;
 }
 
 .btn-colour-1 {
@@ -584,7 +584,7 @@ nth-child(2) refers to the second spanned element
     gap: 10vw;
 }
 
-.articles-container {
+.experience-list {
     display: flex;
     text-align: initial;
     flex-wrap: wrap;
@@ -594,21 +594,21 @@ nth-child(2) refers to the second spanned element
     padding: 0 0 0 1.5rem;
 }
 
-.section__text__italic {
-    font-style: italic;
-    color: rgb(153, 153, 153);
- }
-
-article {
+.experience-list-item {
     display: flex;
     gap: 0.5rem;
 }
 
-article:hover {
-    color: var(--accent-blue);
-    cursor: pointer;
+.experience-list-item:hover {
+    /*color: var(--accent-blue);*/
+    /*cursor: pointer;*/
     transition: all 300ms ease;
 }
+
+.section__text__italic {
+    font-style: italic;
+    color: rgb(153, 153, 153);
+ }
 
 #page-hero-nav {
     /* gap: 5rem; */
@@ -625,12 +625,15 @@ article:hover {
 }
 
 .project-img {
+    object-fit: cover;
     width: 100%;
     height: 100%;
+    /*
+    border: 2.5px solid white;
+    border-radius: 10%;*/
 }
 
 .play-img {
-    border-radius: 2rem;
     max-height: 250px;
 }
 

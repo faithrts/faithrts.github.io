@@ -12,7 +12,7 @@ first breakpoint
     }
 
     /* changes colour of text for hovering over options in hamburger menu */
-    a:hover {
+    .menu-links a:hover {
         color: var(--accent-colour);
         background-color: var(--accent-colour-light);
     }

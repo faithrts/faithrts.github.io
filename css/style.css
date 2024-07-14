@@ -60,10 +60,14 @@
 html {
     background-color: var(--background);
     scroll-behavior: smooth;
+    overflow: hidden;
+    height: 100%;
 }
 
 body {
     font-family: 'Crimson Text';
+    overflow: auto;
+    height: 100%;
 }
 
 h1 {

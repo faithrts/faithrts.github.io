@@ -727,7 +727,7 @@ nth-child(2) refers to the second spanned element
 footer {
     height: 20vh;
     margin: 0;
-    background-color: var(--accent-red);
+    background-color: var(--accent-blue);
     /*background-color: rgb(7, 44, 103);*/
     color: white !important;
 }

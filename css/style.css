@@ -740,6 +740,11 @@ footer {
     justify-content: space-around;
 }
 
+footer a:hover {
+    color: var(--accent-red);
+    transition: 0.3s;
+}
+
 nav {
     justify-content: space-around;
     align-items: center;

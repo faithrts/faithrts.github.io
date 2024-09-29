@@ -76,4 +76,11 @@ first breakpoint
     .flowers-container {
         gap: 1em;
     }
+
+    #hero {
+        background-attachment: local;
+    }
+    .thin-banner {
+        background-attachment: local;
+    }
 }

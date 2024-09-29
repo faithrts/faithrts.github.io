@@ -3,6 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yarndings+12&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 * {
     margin: 0;
@@ -65,25 +67,41 @@ html {
 }
 
 body {
-    font-family: 'Crimson Text';
     overflow: auto;
     height: 100%;
+}
+
+a {
+    font-family: 'Crimson Text';
 }
 
 h1 {
     font-family: 'Crimson Text';
     font-style: italic;
-    /*color: var(--title-colour);*/
-    font-weight: 400;
+    font-weight: 300;
 }
 
 h2 {
-    font-weight: 400;
+    font-family: 'Crimson Text';
+    font-weight: 300;
     font-size: 1.8em;
 }
 
+h3 {
+    font-family: 'Crimson Text';
+    font-weight: 300;
+    font-size: 1.3em;
+}
+
 p {
-    font-size: 1.4em;
+    font-family: 'Roboto Mono';
+    font-weight: 300;
+    font-size: 1.1em;
+}
+
+p3 {
+    font-family: 'Roboto Mono';
+    font-weight: 300;
 }
 
 /* TRANSITION */
@@ -299,12 +317,14 @@ nth-child(2) refers to the second spanned element
     height: 100vh;
     background-image: url('../assets/background.png');
     background-attachment: fixed;
-    transition: 2;
+    transition: 2s;
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     margin-left: 0px;
     margin-right: 0px;
+
+    /* overwrites 5vh padding in section */
 }
 
 .hero-text-container {
@@ -436,6 +456,7 @@ nth-child(2) refers to the second spanned element
 }
 
 .btn {
+    font-family: 'Roboto Mono';
     width: 8rem;
     border-radius: 2rem;
     padding: 1rem;
@@ -484,7 +505,7 @@ nth-child(2) refers to the second spanned element
     height: 15vh;
 }
 
-.work-banner {
+.thin-banner {
     height: 35vh;
     background-image: url('../assets/background.png');
     background-attachment: fixed;

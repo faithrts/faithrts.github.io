@@ -77,10 +77,19 @@ first breakpoint
         gap: 1em;
     }
 
+    /* preventing background parallax */
     #hero {
         background-attachment: local;
     }
     .thin-banner {
         background-attachment: local;
     }
+
+    /* stopping horizontal scrolling on mobile */
+    html, body {
+        overflow-x: hidden;
+      }
+      body {
+        position: relative
+      }
 }

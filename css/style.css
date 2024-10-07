@@ -124,6 +124,7 @@ a:hover {
 
 .nav__current {
     font-size: 1em;
+    pointer-events: none;
 }
 
 /* 
@@ -383,16 +384,9 @@ nth-child(2) refers to the second spanned element
 }
 
 .hamburger__highlight__text {
-    /*
-    color: var(--accent-colour);
-    background-color: var(--accent-colour-light);
-    */
-    display: block;
-    padding: 10px;
-    text-align: center;
-    font-size: 1.5rem;
-    color: var(--accent-yellow);
-    text-decoration: none;
+    color: var(--accent-yellow) !important;
+    pointer-events: none !important;
+    
 }
 
 .highlight__text {

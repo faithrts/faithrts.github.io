@@ -11,6 +11,13 @@
     padding: 0;
 }
 
+::selection {
+    /* Change highlight background color to black */
+    background: #D6E6FF;
+    /* Change highlight text color to red */
+    color: #ff0000;
+  }
+
 /* TEXT */
 
 .script-text {
@@ -48,7 +55,7 @@
 .pixel-symbol-bullet {
     font-family: 'Yarndings 12';
     font-size: 1.25em;
-    margin: 0.1rem 0.7rem 0 0.1rem;
+    margin: 0.1rem 0.71rem 0 0.1rem;
 }
 
 .pixel-bullet {
@@ -69,10 +76,6 @@ html {
 body {
     overflow: auto;
     height: 100%;
-}
-
-a {
-    font-family: 'Crimson Text';
 }
 
 h1 {
@@ -102,6 +105,14 @@ p {
 p3 {
     font-family: 'Roboto Mono';
     font-weight: 300;
+}
+
+mark {
+    color: var(--accent-blue);
+  }
+
+mark:hover {
+    text-decoration: underline;
 }
 
 /* TRANSITION */
@@ -136,6 +147,7 @@ can be a flex from the left side or the right side
 nav, 
 .nav-links {
     display: flex;
+    font-family: 'Crimson Text';
 }
 
 /* 

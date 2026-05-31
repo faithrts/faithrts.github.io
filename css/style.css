@@ -213,6 +213,11 @@ to select a single, unique element
 */
 #hamburger-nav {
     display: none;
+    z-index: 100;
+}
+
+#desktop-nav {
+    z-index: 100;
 }
 
 .hamburger-menu {
@@ -338,6 +343,35 @@ nth-child(2) refers to the second spanned element
     margin-right: 0px;
 
     /* overwrites 5vh padding in section */
+}
+
+.gradient-background {
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.gradient-blob {
+    position: absolute;
+    border-radius: 10rem;
+    animation: gradient 4s infinite;
+}
+@keyframes gradient {
+    50%{
+        transform: scale(1.3) translate(100px);
+    }
+}
+.gradient-blob{
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    background-color: #D6E6FF
+}
+.gradient-background div:nth-child(12){
+    height: 80%;
+    width: 70%;
+    background-color: #ff0000;
+    top: -12%;
+    right: -12%;
 }
 
 .hero-text-container {

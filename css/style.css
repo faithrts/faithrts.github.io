@@ -40,7 +40,7 @@
 }
 
 .yellow-text {
-    color: var(--accent-yellow);
+    color: var(--accent-turquoise);
 }
 
 .grey-text {
@@ -328,7 +328,7 @@ nth-child(2) refers to the second spanned element
 #hero {
     /* gap: 5rem; */
     height: 100vh;
-    background-image: url('../assets/background.png');
+    background-image: url('../assets/collage.png');
     background-attachment: fixed;
     transition: 2s;
     background-position: top;
@@ -396,7 +396,7 @@ nth-child(2) refers to the second spanned element
 }
 
 .hamburger__highlight__text {
-    color: var(--accent-yellow) !important;
+    color: var(--accent-turquoise) !important;
     pointer-events: none !important;
     
 }
@@ -406,7 +406,7 @@ nth-child(2) refers to the second spanned element
     color: var(--accent-colour);
     background-color: var(--accent-colour-light);
     */
-    color: var(--accent-yellow);
+    color: var(--accent-turquoise);
 }
 
 #hero h1 {
@@ -513,7 +513,7 @@ nth-child(2) refers to the second spanned element
 
 .thin-banner {
     height: 35vh;
-    background-image: url('../assets/background.png');
+    background-image: url('../assets/collage.png');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -523,7 +523,7 @@ nth-child(2) refers to the second spanned element
 }
 
 .yellow-banner {
-    background-color: var(--accent-yellow);
+    background-color: var(--accent-turquoise);
 }
 
 .banner__text {

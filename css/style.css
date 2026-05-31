@@ -35,12 +35,20 @@
     color: var(--accent-red);
 }
 
+.light-blue-text {
+    color: #9AE6FF;
+}
+
 .blue-text {
     color: var(--accent-blue);
 }
 
-.yellow-text {
-    color: var(--accent-yellow);
+.orange-text {
+    color: var(--accent-orange);
+}
+
+.mint-text {
+    color: #ABDDB7;
 }
 
 .grey-text {
@@ -220,6 +228,7 @@ to select a single, unique element
 #desktop-nav {
     z-index: 100;
     position: relative;
+    background: transparent !important;
 }
 
 .hamburger-menu {
@@ -355,35 +364,44 @@ nth-child(2) refers to the second spanned element
     overflow: hidden;
     position: relative;
     padding: 0;
-    background-color: #343232;
+    background: linear-gradient(-60deg, #140712, #BFD4C5, #B4E3EB, #A9A9D0);
+    animation: gradient_background 15s ease infinite;
     z-index: 1;
+    background-size: 200% 200%; /* makes it big enough to move */
 }
+@keyframes gradient_background {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+} 
+
 .gradient-blob {
     position: absolute;
     border-radius: 10rem;
     animation: gradient 10s infinite;
     pointer-events: none;
+    z-index: 1;
 }
 @keyframes gradient {
     50%{
         transform: scale(0.5) translate(100px);
     }
 }
-.blob-backround {
-    position: absolute;
-    background-color: black;
-    border-radius: 0rem;
-    pointer-events: none;
-}
 #blob-1 {
     height: 90%;
     width: 53%;
-    background-color: #D6E6FF
+    background-color: #7dd06210;
 }
 #blob-2 {
     height: 90%;
     width: 84%;
-    background-color: red;
+    background-color: #32811830;
     animation-delay: -5s;
     top: -36%;
     right: -28%
@@ -391,7 +409,7 @@ nth-child(2) refers to the second spanned element
 #blob-3 {
     height: 54%;
     width: 83%;
-    background-color: aqua;
+    background-color: #ccffff50;
     animation-delay: 3.5s;
     top: 75%;
     right: 40%
@@ -399,7 +417,7 @@ nth-child(2) refers to the second spanned element
 #blob-4 {
     height: 80%;
     width: 50%;
-    background-color: gainsboro;
+    background-color: #c2d9a520;
     animation-delay: -1.5s;
     top: 20%;
     right: -12%
@@ -407,10 +425,21 @@ nth-child(2) refers to the second spanned element
 #blob-5 {
     height: 65%;
     width: 50%;
-    background-color: pink;
+    background-color: #78bf7840;
     animation-delay: -2.5s;
     top: 25%;
     right: 10%;
+}
+.gradient-background::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px); /* for safari */
+    z-index: 2;
+    pointer-events: none;
 }
 
 .hero-text-container {
@@ -469,7 +498,7 @@ nth-child(2) refers to the second spanned element
 }
 
 .hamburger__highlight__text {
-    color: var(--accent-yellow) !important;
+    color: var(--accent-orange) !important;
     pointer-events: none !important;
     
 }
@@ -479,7 +508,7 @@ nth-child(2) refers to the second spanned element
     color: var(--accent-colour);
     background-color: var(--accent-colour-light);
     */
-    color: var(--accent-yellow);
+    color: var(--accent-orange);
 }
 
 #hero h1 {
@@ -596,7 +625,7 @@ nth-child(2) refers to the second spanned element
 }
 
 .yellow-banner {
-    background-color: var(--accent-yellow);
+    background-color: var(--accent-orange);
 }
 
 .banner__text {

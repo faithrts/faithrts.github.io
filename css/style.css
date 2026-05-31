@@ -355,13 +355,13 @@ nth-child(2) refers to the second spanned element
     overflow: hidden;
     position: relative;
     padding: 0;
-    background-color: black;
+    background-color: #343232;
     z-index: 1;
 }
 .gradient-blob {
     position: absolute;
     border-radius: 10rem;
-    animation: gradient 4s infinite;
+    animation: gradient 10s infinite;
     pointer-events: none;
 }
 @keyframes gradient {
@@ -376,25 +376,41 @@ nth-child(2) refers to the second spanned element
     pointer-events: none;
 }
 #blob-1 {
-    height: 100%;
-    width: 100%;
-    z-index: -1;
+    height: 90%;
+    width: 53%;
     background-color: #D6E6FF
 }
 #blob-2 {
-    height: 100%;
-    width: 100%;
-    z-index: -1;
+    height: 90%;
+    width: 84%;
     background-color: red;
-    animation-delay: 2s;
+    animation-delay: -5s;
+    top: -36%;
+    right: -28%
 }
-
-.blah2{
+#blob-3 {
+    height: 54%;
+    width: 83%;
+    background-color: aqua;
+    animation-delay: 3.5s;
+    top: 75%;
+    right: 40%
+}
+#blob-4 {
     height: 80%;
-    width: 70%;
-    background-color: #ff0000;
-    top: -12%;
-    right: -12%;
+    width: 50%;
+    background-color: gainsboro;
+    animation-delay: -1.5s;
+    top: 20%;
+    right: -12%
+}
+#blob-5 {
+    height: 65%;
+    width: 50%;
+    background-color: pink;
+    animation-delay: -2.5s;
+    top: 25%;
+    right: 10%;
 }
 
 .hero-text-container {

@@ -213,11 +213,13 @@ to select a single, unique element
 */
 #hamburger-nav {
     display: none;
+    position: relative;
     z-index: 100;
 }
 
 #desktop-nav {
     z-index: 100;
+    position: relative;
 }
 
 .hamburger-menu {
@@ -260,6 +262,7 @@ The links when the hamburger menu is opened
     max-height: 0;
     overflow: hidden;
     transition: all 0.3 ease-in-out;
+    z-index: 99;
 }
 
 .menu-links a {
@@ -346,18 +349,20 @@ nth-child(2) refers to the second spanned element
     /* overwrites 5vh padding in section */
 }
 
+
 .gradient-background {
     min-height: 100vh;
     overflow: hidden;
     position: relative;
     padding: 0;
     background-color: black;
-    z-index: -5;
+    z-index: 1;
 }
 .gradient-blob {
     position: absolute;
     border-radius: 10rem;
     animation: gradient 4s infinite;
+    pointer-events: none;
 }
 @keyframes gradient {
     50%{
@@ -368,6 +373,7 @@ nth-child(2) refers to the second spanned element
     position: absolute;
     background-color: black;
     border-radius: 0rem;
+    pointer-events: none;
 }
 #blob-1 {
     height: 100%;

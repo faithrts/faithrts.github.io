@@ -1,7 +1,9 @@
 :root {
     --accent-red: #F90001;
-    --accent-blue: #6570D3;
-    --accent-orange: #FF8E56;
+    --accent-blue: #9AE6FF;
+    --accent-turquoise: #008A86;
+    --accent-lilac: #DCD6F7;
+    --accent-orange: #FFAD83;
 
      /* default colour palette */
     --background: #F2F2F2;

@@ -15,7 +15,7 @@
     /* Change highlight background color to black */
     background: #D6E6FF;
     /* Change highlight text color to red */
-    color: #ff0000;
+    color: var(--accent-orange);
   }
 
 /* TEXT */
@@ -31,20 +31,12 @@
     color: white;
 }
 
-.red-text {
-    color: var(--accent-red);
-}
-
-.light-blue-text {
-    color: #9AE6FF;
+.orange-text {
+    color: var(--accent-orange);
 }
 
 .blue-text {
     color: var(--accent-blue);
-}
-
-.orange-text {
-    color: var(--accent-orange);
 }
 
 .mint-text {
@@ -116,7 +108,7 @@ p3 {
 }
 
 mark {
-    color: var(--accent-blue);
+    color: var(--accent-lilac);
   }
 
 mark:hover {
@@ -136,7 +128,7 @@ a,
 
 
 a:hover {
-    color: var(--accent-blue);
+    color: var(--accent-lilac);
 }
 
 /* DESKTOP NAV */
@@ -252,7 +244,7 @@ Makes the lines of the hamburger menu visible
 .hamburger-icon span {
     width: 100%;
     height: 2px;
-    background-color: var(--accent-blue);
+    background-color: var(--accent-lilac);
     transition: all 0.3 ease-in-out;
 }
 
@@ -498,7 +490,7 @@ nth-child(2) refers to the second spanned element
 }
 
 .hamburger__highlight__text {
-    color: var(--accent-orange) !important;
+    color: var(--accent-lilac) !important;
     pointer-events: none !important;
     
 }
@@ -508,7 +500,7 @@ nth-child(2) refers to the second spanned element
     color: var(--accent-colour);
     background-color: var(--accent-colour-light);
     */
-    color: var(--accent-orange);
+    color: var(--accent-turquoise);
 }
 
 #hero h1 {
@@ -582,9 +574,9 @@ nth-child(2) refers to the second spanned element
 }
 
 .btn-colour-1:hover {
-    background: var(--accent-blue);
-    border: white 0.1rem solid;
-    color: white;
+    background: var(--accent-lilac);
+    border: #A9A9D0 0.1rem solid;
+    color: #5C47C2;
 }
 
 .btn-colour-2 {
@@ -625,13 +617,14 @@ nth-child(2) refers to the second spanned element
 }
 
 .yellow-banner {
-    background-color: var(--accent-orange);
+    background-color: var(--accent-turquoise);
 }
 
 .banner__text {
     color: white;
     font-style: italic;
     font-size: 2.2rem;
+    font-weight: 100;
 }
 
 #about {
@@ -734,7 +727,7 @@ nth-child(2) refers to the second spanned element
 }
 
 .experience-list-item:hover {
-    /*color: var(--accent-blue);*/
+    /*color: var(--accent-lilac);*/
     /*cursor: pointer;*/
     transition: all 300ms ease;
 }
@@ -857,7 +850,7 @@ nth-child(2) refers to the second spanned element
 footer {
     height: 20vh;
     margin: 0;
-    background-color: var(--accent-blue);
+    background-color: #747ED7;
     /*background-color: rgb(7, 44, 103);*/
     color: white !important;
 }
@@ -871,7 +864,7 @@ footer {
 }
 
 footer a:hover {
-    color: var(--accent-red);
+    color: var(--accent-orange);
     transition: 0.3s;
 }
 

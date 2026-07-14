@@ -79,7 +79,8 @@ function placeImage(x, y) {
     img.style.zIndex = "1";
 
     img.style.transformOrigin = "top left";
-    img.style.transform = "scale(0.1) translate(-50%, -50%)";
+    let rotate_val = Math.random() * 360; 
+    img.style.transform = "scale(0.1) rotate(" + rotate_val + "deg) translate(-50%, -50%) ";
 
     // add to html
     const hero = document.getElementById("hero")

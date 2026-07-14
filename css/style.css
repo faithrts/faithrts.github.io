@@ -15,7 +15,7 @@
     /* Change highlight background color to black */
     background: #D6E6FF;
     /* Change highlight text color to red */
-    color: var(--accent-orange);
+    color: var(--accent-red);
   }
 
 /* TEXT */
@@ -25,6 +25,11 @@
     font-size: 1.5em;
     font-weight: 400;
     font-style: normal;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 100;
 }
 
 .white-text {
@@ -213,14 +218,23 @@ to select a single, unique element
 */
 #hamburger-nav {
     display: none;
-    position: relative;
     z-index: 100;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 #desktop-nav {
     z-index: 100;
-    position: relative;
+    position: absolute;
+    top: 0;
+    width: 100%;
     background: transparent !important;
+    padding: 5vh 0
+}
+
+.page-nav-container {
+    height: 25vh;
 }
 
 .hamburger-menu {
@@ -347,7 +361,10 @@ nth-child(2) refers to the second spanned element
     margin-left: 0px;
     margin-right: 0px;
     padding: 0vh 0vh 0vh 0vh;
+    position: relative;
     /* overwrites 5vh padding in section */
+    overflow-x: clip;
+    overflow-y: visible;
 }
 
 
@@ -507,6 +524,11 @@ nth-child(2) refers to the second spanned element
     color: white;
 }
 
+.about-text h2 {
+    padding: 0 0 0 20vw;
+    font-style: italic;
+}
+
 #hero .centered__text {
     padding-top: 25vh;
 }
@@ -607,7 +629,7 @@ nth-child(2) refers to the second spanned element
 
 .thin-banner {
     height: 35vh;
-    background-image: url('../assets/background.png');
+    background-image: url('../assets/background_collage.png');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -618,6 +640,14 @@ nth-child(2) refers to the second spanned element
 
 .yellow-banner {
     background-color: var(--accent-turquoise);
+}
+
+.blue-banner {
+    background-color: var(--accent-royal-blue);
+}
+
+.red-banner {
+    background-color: var(--accent-red);
 }
 
 .banner__text {
@@ -637,6 +667,8 @@ nth-child(2) refers to the second spanned element
     align-items: center;
     padding: 10vh 10vw;
     gap: 4em;
+    background: var(--accent-royal-blue);
+    color: white;
 }
 
 .flowers-container {
@@ -653,6 +685,7 @@ nth-child(2) refers to the second spanned element
 
 .about-text {
     align-items: center;
+    padding: 20vh 10vw;
 }
 
 .about-details-container {
@@ -741,6 +774,8 @@ nth-child(2) refers to the second spanned element
     /* gap: 5rem; */
     margin-left: 0px;
     margin-right: 0px;
+    position: relative;
+    padding: 0 0 5vh 0;
 }
 
 /* PROJECTS section */
@@ -850,7 +885,7 @@ nth-child(2) refers to the second spanned element
 footer {
     height: 20vh;
     margin: 0;
-    background-color: #747ED7;
+    background-color: var(--accent-royal-blue);
     /*background-color: rgb(7, 44, 103);*/
     color: white !important;
 }

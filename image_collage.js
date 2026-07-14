@@ -1,6 +1,8 @@
 //var fs = require('fs');
 //var images = fs.readdirSync('../assets/collage/');
 
+// need to hardcode list as js running in browser cant run the above
+// to fetch filenames from folder
 const collageFiles = [
   "053_arts_technology.png",
   "abstract_bark.png",
@@ -72,8 +74,12 @@ function placeImage(x, y) {
     img.style.position = "absolute";
     img.style.left = x + "px";
     img.style.top = y + "px";
-    img.style.transform = "scale(0.1)";
-    img.style.zIndex = "100";
+
+    // so it's on top of the moving divs
+    img.style.zIndex = "1";
+
+    img.style.transformOrigin = "top left";
+    img.style.transform = "scale(0.1) translate(-50%, -50%)";
 
     // add to html
     const hero = document.getElementById("hero")
@@ -81,9 +87,22 @@ function placeImage(x, y) {
     //document.body.appendChild(img)
 
     counter += 1;
-    if (counter >= images.length) {
+    if (counter >= collageFiles.length) {
         counter = 0
     }
 }
 
-placeImage(-500, -50)
+document.addEventListener("click", function(event) {
+    // stop default behaviour from happening
+
+    const hero = document.getElementById("hero");
+    const rect = hero.getBoundingClientRect();
+
+    //const x = event.pageX - rect.left
+    //const y = event.pageY - rect.right
+    const x = event.pageX
+    const y = event.pageY
+
+    // pageX is the x value of the click; pageY is the y value
+    placeImage(x, y)
+})

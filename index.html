@@ -16,48 +16,65 @@
 
 <body>
     <section id="hero">
+        <nav id="desktop-nav">
+            <div class="logo">
+                <h1 class="script-text">Faith Ruetas</h1>
+            </div>
+            <div>
+                <ul class="nav-links page-links">
+                    <li><a class="highlight__text nav__current">About</a></li>
+                    <li><a class="white-text" href="../html/work.html">Work</a></li>
+                    <li><a class="white-text" href="../html/play.html">Play</a></li>
+                </ul>
+            </div>
+        </nav>
+        <nav id="hamburger-nav">
+            <div class="logo">
+                <h1 class="script-text">Faith Ruetas</h1>
+            </div>
+            <div class="hamburger-menu">
+                <!-- onclick="toggleMenu()" allows the hamburger to be opened"-->
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <!-- the lines of the hamburger menu-->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links page-links">
+                    <!-- onclick="toggleMenu()" allows the hamburger to be closed"-->
+                    <li><a class="hamburger__highlight__text">About</a></li>
+                    <li><a href="../html/work.html" onclick="toggleMenu()">Work</a></li>
+                    <li><a href="../html/work.html" onclick="toggleMenu()">Play</a></li>
+                </div>
+            </div>
+        </nav>
         <div class="gradient-background">
-            <!--
             <div class="gradient-blob" id="blob-1"></div>
             <div class="gradient-blob" id="blob-2"></div>
             <div class="gradient-blob" id="blob-3"></div>
             <div class="gradient-blob" id="blob-4"></div>
             <div class="gradient-blob" id="blob-5"></div>
-            -->
-            <nav id="desktop-nav">
-                <div class="logo">
-                    <h1 class="script-text">Faith Ruetas</h1>
-                </div>
-                <div>
-                    <ul class="nav-links page-links">
-                        <li><a class="highlight__text nav__current">About</a></li>
-                        <li><a class="white-text" href="../html/work.html">Work</a></li>
-                        <li><a class="white-text" href="../html/play.html">Play</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <nav id="hamburger-nav">
-                <div class="logo">
-                    <h1 class="script-text">Faith Ruetas</h1>
-                </div>
-                <div class="hamburger-menu">
-                    <!-- onclick="toggleMenu()" allows the hamburger to be opened"-->
-                    <div class="hamburger-icon" onclick="toggleMenu()">
-                        <!-- the lines of the hamburger menu-->
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="menu-links page-links">
-                        <!-- onclick="toggleMenu()" allows the hamburger to be closed"-->
-                        <li><a class="hamburger__highlight__text">About</a></li>
-                        <li><a href="../html/work.html" onclick="toggleMenu()">Work</a></li>
-                        <li><a href="../html/work.html" onclick="toggleMenu()">Play</a></li>
-                    </div>
-                </div>
-            </nav>
         </div>
     </section>
+    <div class="about-container">
+        <div class="about-text">
+            <h3> 
+                I can write and distill ideas,
+                <br>
+                <br>
+                build while keeping an eye on the bigger picture, 
+                <br>
+                <br>
+                and ask questions that probe narrative and knowledge gaps.
+            </h3>
+
+            <h2>
+                <br>
+                <br>
+                Get in touch
+            </h2>
+        </div>
+    </div>
 
 
     <script src="../script.js"></script>

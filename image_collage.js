@@ -69,6 +69,7 @@ function placeImage(x, y) {
     // create a new image element and set it as the next element from the list
     const img = document.createElement("img")
     img.setAttribute("src", curImage)
+    img.setAttribute("class", "collage_image")
 
     // x and y placement on the site
     img.style.position = "absolute";
@@ -79,7 +80,7 @@ function placeImage(x, y) {
     img.style.zIndex = "1";
 
     img.style.transformOrigin = "top left";
-    let rotate_val = Math.random() * 360; 
+    let rotate_val = Math.random() * 180 - 90; 
     img.style.transform = "scale(0.1) rotate(" + rotate_val + "deg) translate(-50%, -50%) ";
 
     // add to html

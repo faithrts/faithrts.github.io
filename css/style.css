@@ -795,6 +795,20 @@ nth-child(2) refers to the second spanned element
     border-radius: 10%;*/
 }
 
+@keyframes fade_in {
+    0% { opacity: 0; }
+    100% { opacity: 1 }
+}
+
+.collage_image {
+    animation: fade_in 0.5s;
+    z-index: 1;
+}
+
+.collage_image:hover {
+    z-index: 50;
+}
+
 .play-img {
     max-height: 250px;
 }

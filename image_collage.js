@@ -61,9 +61,55 @@ test.style.top = "40px";
 document.body.appendChild(test);
 */
 
-let counter = 0;
-
+let enableClickAdd = true;
+let counter = 0;    // iterate through images in collageFiles
 function placeImage(x, y) {
+    let img = instantiateCollageItem(x, y);
+
+    counter += 1;
+    if (counter >= collageFiles.length) {
+        counter = 0
+    }
+
+    img.addEventListener("dragstart", (e) => e.preventDefault());
+    img.addEventListener("mousedown", selectCollageItem);
+}
+
+const hero = document.getElementById("hero")
+
+// so we only add images on clicks, not drags
+let heroMouseX;
+let heroMouseY;
+hero.addEventListener("mousedown", function (event) {
+    heroMouseX = event.clientX;
+    heroMouseY = event.clientY;
+})
+hero.addEventListener("mouseup", function(event) {
+    let newMouseX = event.clientX;
+    let newMouseY = event.clientY;
+
+    //let timeDiff = new Date().getTime() - mousedownTime
+    if (enableClickAdd && heroMouseX == newMouseX && heroMouseY == newMouseY) {
+        // gets the bounding rectangle of hero div relative to viewport
+        const rect = event.currentTarget.getBoundingClientRect();
+
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+
+        // pageX is the x value of the click; pageY is the y value
+        placeImage(x, y);
+    }
+});
+
+// if we ever want to start with collage items
+/*
+const collage_items_list = document.querySelectorAll('.collage_image')
+collage_items_list.forEach(function(cur_item) {
+   pass
+});
+*/
+
+function instantiateCollageItem(x, y) {
     const curImage = "../assets/collage/" + collageFiles[counter]
 
     // create a new image element and set it as the next element from the list
@@ -72,39 +118,61 @@ function placeImage(x, y) {
     img.setAttribute("class", "collage_image")
 
     // x and y placement on the site
-    img.style.position = "absolute";
     img.style.left = x + "px";
     img.style.top = y + "px";
 
-    // so it's on top of the moving divs
-    img.style.zIndex = "1";
+    // custom params
+    img.startX = x;
+    img.startY = y;
 
     img.style.transformOrigin = "top left";
     let rotate_val = Math.random() * 180 - 90; 
     img.style.transform = "scale(0.1) rotate(" + rotate_val + "deg) translate(-50%, -50%) ";
 
-    // add to html
-    const hero = document.getElementById("hero")
-    hero.appendChild(img)
-    //document.body.appendChild(img)
+    // add to hero div
+    hero.appendChild(img);
 
-    counter += 1;
-    if (counter >= collageFiles.length) {
-        counter = 0
+    return img
+}
+
+///////
+
+let cur_item;
+let collageMouseX;
+let collageMouseY;
+function selectCollageItem(event) {
+    cur_item = event.currentTarget;
+
+    if (cur_item.classList.contains("collage_image")) {
+        enableClickAdd = false;
+
+        collageMouseX = event.clientX;
+        collageMouseY = event.clientY;
+
+        document.addEventListener("mousemove", dragCollageItem);
+        document.addEventListener("mouseup", dropCollageItem);
     }
 }
 
-document.addEventListener("click", function(event) {
-    // stop default behaviour from happening
+function dragCollageItem(event) {
+    if (cur_item.classList.contains("collage_image")){
+        // custom params
+        cur_item.startX = event.clientX;
+        cur_item.startY = event.clientY;
 
-    const hero = document.getElementById("hero");
-    const rect = hero.getBoundingClientRect();
+        // placing collage_item
+        cur_item.style.left = event.clientX + "px";
+        cur_item.style.top = event.clientY + "px";
+    }
+}
 
-    //const x = event.pageX - rect.left
-    //const y = event.pageY - rect.right
-    const x = event.pageX
-    const y = event.pageY
+function dropCollageItem(event) {
+    let newMouseX = event.clientX;
+    let newMouseY = event.clientY;
 
-    // pageX is the x value of the click; pageY is the y value
-    placeImage(x, y)
-})
+    // make sure this is a drag + drop, not just a click
+    if (collageMouseX != newMouseX && collageMouseY != newMouseY) {
+        enableClickAdd = true;
+        document.removeEventListener('mousemove', dragCollageItem)
+    }
+}

@@ -133,7 +133,7 @@ a,
 
 
 a:hover {
-    color: var(--accent-lilac);
+    color: var(--accent-blue);
 }
 
 /* DESKTOP NAV */
@@ -507,8 +507,9 @@ nth-child(2) refers to the second spanned element
 }
 
 .hamburger__highlight__text {
-    color: var(--accent-lilac) !important;
+    color: var(--accent-red) !important;
     pointer-events: none !important;
+    font-weight: 600;
     
 }
 
@@ -517,7 +518,8 @@ nth-child(2) refers to the second spanned element
     color: var(--accent-colour);
     background-color: var(--accent-colour-light);
     */
-    color: var(--accent-turquoise);
+    color: var(--accent-red);
+    font-weight: 600;
 }
 
 #hero h1 {
@@ -803,6 +805,7 @@ nth-child(2) refers to the second spanned element
 .collage_image {
     animation: fade_in 0.5s;
     z-index: 1;
+    position: absolute;
 }
 
 .collage_image:hover {

@@ -139,7 +139,6 @@ a:hover {
 /* DESKTOP NAV */
 
 .nav__current {
-    font-size: 1em;
     pointer-events: none;
 }
 

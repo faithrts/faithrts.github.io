@@ -84,23 +84,24 @@ hero.addEventListener("mouseup", function(event) {
 
         placeImage(x, y);
     }
+    // accidental drag
+    if (!enableClickAdd) {
+        document.removeEventListener('mousemove', dragCollageItem);
+    }
 });
 
 function placeImage(x, y) {
-    let img = instantiateCollageItem(x, y);
+    instantiateCollageItem(x, y);
 
     counter += 1;
     if (counter >= collageFiles.length) {
         counter = 0
     }
-
-    img.addEventListener("dragstart", (e) => e.preventDefault());
-    img.addEventListener("mousedown", selectCollageItem);
 }
 
 // if we ever want to start with collage items on the page
 /*
-const collage_items_list = document.querySelectorAll('.collage_image')
+const collage_items_list = document.querySelectorAll('.collage-img')
 collage_items_list.forEach(function(cur_img) {
    cur_img.addEventListener("")
 });
@@ -110,7 +111,7 @@ function instantiateCollageItem(x, y) {
     let png = "../assets/collage/" + collageFiles[counter]
     let img = document.createElement("img")
     img.setAttribute("src", png)
-    img.setAttribute("class", "collage_image")
+    img.setAttribute("class", "collage-img")
 
     // x and y placement on the site
     img.style.left = x + "px";
@@ -120,10 +121,13 @@ function instantiateCollageItem(x, y) {
     let rotate_val = Math.random() * 180 - 90; 
     img.style.transform = "scale(0.1) rotate(" + rotate_val + "deg) translate(-50%, -50%) ";
 
+    img.style.zIndex = topZIndex;
+
     // add to hero div
     hero.appendChild(img);
 
-    return img
+    img.addEventListener("dragstart", (e) => e.preventDefault());
+    img.addEventListener("mousedown", selectCollageItem);
 }
 
 /////// drag + drop image
@@ -136,7 +140,7 @@ let collageMouseY;
 function selectCollageItem(event) {
     cur_item = event.currentTarget;
 
-    if (cur_item.classList.contains("collage_image")) {
+    if (cur_item.classList.contains("collage-img")) {
         // stop click functionality once drag image initiated
         enableClickAdd = false;
 
@@ -153,7 +157,7 @@ function selectCollageItem(event) {
 }
 
 function dragCollageItem(event) {
-    if (cur_item.classList.contains("collage_image")){
+    if (cur_item.classList.contains("collage-img")){
         let diffX = collageMouseX - event.clientX;
         let diffY = collageMouseY - event.clientY;
 
@@ -171,6 +175,7 @@ function dragCollageItem(event) {
     }
 }
 
+let topZIndex = 3;
 function dropCollageItem(event) {
     let newMouseX = event.clientX;
     let newMouseY = event.clientY;
@@ -182,6 +187,10 @@ function dropCollageItem(event) {
     ) {
         // resume click to create img functionality
         enableClickAdd = true;
+
+        // place on top
+        cur_item.style.zIndex = topZIndex;
+        topZIndex += 1;
 
         // stop drag
         document.removeEventListener('mousemove', dragCollageItem)

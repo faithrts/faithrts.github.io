@@ -152,6 +152,7 @@ nav,
 .nav-links {
     display: flex;
     font-family: 'Crimson Text';
+    pointer-events: auto;
 }
 
 /* 
@@ -184,6 +185,7 @@ a {
 
 .logo {
     font-size: 2rem;
+    pointer-events: auto;
 }
 
 /*
@@ -221,6 +223,7 @@ to select a single, unique element
     position: absolute;
     top: 0;
     width: 100%;
+    pointer-events: none;
 }
 
 #desktop-nav {
@@ -229,7 +232,8 @@ to select a single, unique element
     top: 0;
     width: 100%;
     background: transparent !important;
-    padding: 5vh 0
+    padding: 5vh 0;
+    pointer-events: none;
 }
 
 .page-nav-container {
@@ -239,6 +243,7 @@ to select a single, unique element
 .hamburger-menu {
     position: relative;
     display: inline-block;
+    pointer-events: auto;
 }
 
 .hamburger-icon {
@@ -350,7 +355,7 @@ nth-child(2) refers to the second spanned element
 #hero {
     /* gap: 5rem; */
     height: 100vh;
-    background: url('../assets/cork.jpg');
+    background: url('../assets/background/graph.jpg');
     transition: 2s;
     background-position: top;
     background-repeat: no-repeat;
@@ -514,7 +519,6 @@ nth-child(2) refers to the second spanned element
 .hamburger__highlight__text {
     color: var(--accent-red) !important;
     pointer-events: none !important;
-    font-weight: 600;
     
 }
 
@@ -524,7 +528,6 @@ nth-child(2) refers to the second spanned element
     background-color: var(--accent-colour-light);
     */
     color: var(--accent-red);
-    font-weight: 600;
 }
 
 #hero h1 {

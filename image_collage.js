@@ -3,7 +3,7 @@
 
 // hardcoding as js running in browser cant run the above
 // to fetch filenames from folder
-const collageFiles = [
+let collageFiles = [
   "053_arts_technology.png",
   "abstract_bark.png",
   "aluminum.png",
@@ -49,6 +49,24 @@ const collageFiles = [
   "tiger.png",
   "vases.png"
 ];
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max)
+}
+function shuffle(list) {
+    lastIndex = list.length - 1;
+    while (lastIndex > 0) {
+        // random integer between 0 and lastIndex
+        randIndex = getRandomInt(lastIndex);
+        randItem = list[randIndex];
+        oldItem = list[lastIndex];
+
+        list[lastIndex] = randItem;
+        list[randIndex] = oldItem;
+        lastIndex -= 1;
+    }
+    return list;
+}
+collageFiles = shuffle(collageFiles)
 
 /////// click + create image
 
@@ -196,3 +214,27 @@ function dropCollageItem(event) {
         document.removeEventListener('mousemove', dragCollageItem)
     }
 }
+
+/////// add starter images to page
+
+function addStarterItems() {
+    /*
+    placeImage(516, 298);
+    placeImage(784, 524);
+    placeImage(569, 565);
+    placeImage(259, 521);
+    placeImage(922, 368);
+    placeImage(1181, 598);
+    placeImage(1275, 253);
+    placeImage(1424, 421);
+    placeImage(51, 226);
+    */
+   counter = 0
+   while (counter < 15) {
+    x = getRandomInt(1500)
+    y = getRandomInt(600)
+    placeImage(x, y)
+    counter += 1;
+   }
+}
+addStarterItems()

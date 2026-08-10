@@ -539,6 +539,14 @@ nth-child(2) refers to the second spanned element
     font-style: italic;
 }
 
+.about-text a {
+    color: white;
+}
+
+.about-text a:hover {
+    color: var(--accent-blue);
+}
+
 #hero .centered__text {
     padding-top: 25vh;
 }
@@ -546,7 +554,7 @@ nth-child(2) refers to the second spanned element
 .socials__container {
     display: flex;
     align-items: center;
-    gap: 0.75em;
+    gap: 1em;
 }
 
 /* ICONS */
@@ -639,7 +647,7 @@ nth-child(2) refers to the second spanned element
 
 .thin-banner {
     height: 35vh;
-    background-image: url('../assets/background_collage.png');
+    background-image: url('../assets/background/graph.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -925,7 +933,7 @@ footer {
 }
 
 footer a:hover {
-    color: var(--accent-orange);
+    color: var(--accent-blue);
     transition: 0.3s;
 }
 
@@ -954,4 +962,61 @@ nav {
     z-index: 6;
     height: 100%;
     width: 100%;
+}
+
+/* work gallery */
+
+/* responsive grid layout */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 48px;
+    margin: 0 10vw;
+    padding: 10vh 0;
+}
+
+/* item cards */
+.gallery-item {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 8vh;
+}
+
+.gallery-item img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+.gallery-item-content {
+    padding: 24px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* center aligns text + paragraphs */
+    text-align: center;     /* text wrapper inside centers */
+    gap: 16px;
+}
+
+.gallery-item-contner h3 {
+    font-size: 1.3rem;
+
+    /* the below are just in case */
+    color: #000;
+    line-height: 1.6;
+    font-weight: 500;
+    margin: 0;
+}
+
+.gallery-item-container p {
+    font-size: 1rem;
+
+    */ the below are just in case */
+    color: #222;
+    line-height: 1.6;
+    font-weight: 300;
+    margin: 0;
 }

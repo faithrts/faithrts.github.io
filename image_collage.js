@@ -49,14 +49,22 @@ let collageFiles = [
   "tiger.png",
   "vases.png"
 ];
-function getRandomInt(max) {
-    return Math.floor(Math.random() * max)
+function getRandomInt(min, max) {
+    randomNum = Math.random() * max
+    randomNum += min
+
+    if (randomNum > max) {
+        randomNum -= getRandomInt(0, min)
+    }
+    randomInt = Math.floor(randomNum)
+
+    return randomInt
 }
 function shuffle(list) {
     lastIndex = list.length - 1;
     while (lastIndex > 0) {
         // random integer between 0 and lastIndex
-        randIndex = getRandomInt(lastIndex);
+        randIndex = getRandomInt(0, lastIndex);
         randItem = list[randIndex];
         oldItem = list[lastIndex];
 
@@ -229,12 +237,19 @@ function addStarterItems() {
     placeImage(1424, 421);
     placeImage(51, 226);
     */
-   counter = 0
-   while (counter < 15) {
-    x = getRandomInt(1500)
-    y = getRandomInt(600)
-    placeImage(x, y)
-    counter += 1;
-   }
+   i = 0
+   while (i < 15) {
+        x = getRandomInt(0, 1500)
+
+        if (x > 300 && x < 1250) {
+            y = getRandomInt(200, 700)
+        }
+        else {
+            y = getRandomInt(0, 600)
+        }
+
+        placeImage(x, y)
+        i += 1;
+    }
 }
 addStarterItems()

@@ -1,0 +1,107 @@
+[
+  {
+    "title": "DH speaker series",
+    "description": "Over the course of three sessions, brought together six guest speakers and 60 total attendees comprising undergrads, grad students, faculty, and MILA researchers.",
+    "filename": "dh_event_colour.png",
+    "link": "https://drive.google.com/drive/folders/1p1Kfw1fB_9f4ZNBXsRkPMJ-M4ZiFmtkS",
+    "tags": ["event"]
+  },
+  {
+    "title": "Culture-oriented NLP",
+    "description": "Using word embeddings, compared protagonist word associations in book reviews on female-led versus male-led Young Adult novels to explore reader gender bias.",
+    "filename": "semaxis.png",
+    "link": "https://github.com/luca2618/COMP550_project",
+    "tags": ["project", "programming"]
+  },
+  {
+    "title": "Data storytelling",
+    "description": "Processed survey responses from Montreal lawyers, worked with legal clinic to create fictional migrant profiles, and calculated each profile's likelihood of receiving legal aid.",
+    "filename": "aqaadi_rounded.png",
+    "link": "",
+    "tags": ["project", "programming"]
+  },
+  {
+    "title": "\"In Words and Numbers\"",
+    "description": "Examined literary language and science communication both quantitatively and qualitatively (e.g., statistically significant words; close reading).",
+    "filename": "hon_viz.png",
+    "link": "",
+    "tags": ["project", "writing"]
+  },
+  {
+    "title": "公公",
+    "description": "Poem about the pursuit of intra-familial communication within a multi-generational immigrant family",
+    "filename": "gong_gong2.png",
+    "link": "https://theimagist.wixsite.com/theimagist/main",
+    "tags": ["writing"]
+  },
+  {
+    "title": "ML fundamentals",
+    "description": "Implemented K-Nearest Neighbours, Decision Tree, Logistic + Multi-class Regression, and Multi-layer Perceptron models from scratch to classify textual, numerical, and image-based data.",
+    "filename": "ml_models.png",
+    "link": "https://github.com/faithrts/ML-Intro",
+    "tags": ["programming"]
+  },
+  {
+    "title": "Birthday card for Iris",
+    "description": "Pale sky, silver pond <br> Watch the time and petals drift <br> Another year: new dawn <br> Our hearts grow brighter",
+    "filename": "cherry_blossom_card.png",
+    "link": "",
+    "tags": ["art"]
+  },
+  {
+    "title": "Delicious MOO ice cream",
+    "description": "An exploration of a fictitious ice cream company. I especially liked the idea of the flowers blooming from the dripping ice cream, suggesting a sort of subverted revitalization.",
+    "filename": "icecream_collage.png",
+    "link": "",
+    "tags": ["art", "collage"]
+  },
+  {
+    "title": "The magic of late night moonlight",
+    "description": "That strange ephemereality of late night study / work / computer sessions. Published alongside an article I wrote for the Bull & Bear.",
+    "filename": "late_night_moonlight.png",
+    "link": "",
+    "tags": ["art"]
+  },
+  {
+    "title": "IN",
+    "description": "A collection of images I associate with programming. Notice the cat mousepad, curiously inverted tree, and Adam's finger reaching towards technological salvation.",
+    "filename": "in_collage.png",
+    "link": "",
+    "tags": ["art", "collage"]
+  },
+  {
+    "title": "Terror",
+    "description": "A representation of terror. Though the shoe lifts from the chewing gum, the latter remains stuck. This tactile discomfort paired with the psychedelic background and the lefthand quote serve to emphasize this state of nonbeing.",
+    "filename": "terror_collage.png",
+    "link": "",
+    "tags": ["art", "collage"]
+  },
+  {
+    "title": "\"Tongue In Cheek\"",
+    "description": "Tracked the representation of the tongue from a figure of speech in autobiographical slave narratives to a concretized body part in contemporary ones.",
+    "filename": "tongue_books.png",
+    "link": "https://mcgillchannelundergraduatereview.com/2024/03/tongue-in-cheek-from-the-metaphor-to-the-literal/",
+    "tags": ["art", "collage"]
+  },
+  {
+    "title": "Sappling",
+    "description": "Three graphics charting the growth of a small plant overlooking a lake. Created for a corporate sustainability campaign.",
+    "filename": "vector_art_sapling.png",
+    "link": "",
+    "tags": ["art"]
+  },
+  {
+    "title": "YOP wireframe",
+    "description": "Webpage design + implementation for a local nonprofit helping at-risk youth.",
+    "filename": "website_wireframe.png",
+    "link": "",
+    "tags": ["art"]
+  },
+  {
+    "title": "Les chutes Sainte-Marguerite",
+    "description": "Small painting of a cool spot my boyfriend showed me in Sainte-Adèle, Québec. Acrylic on wood",
+    "filename": "chutes.png",
+    "link": "",
+    "tags": ["art"]
+  }
+]

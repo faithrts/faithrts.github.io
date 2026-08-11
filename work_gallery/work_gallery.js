@@ -47,7 +47,9 @@ function renderGallery(itemsToRender) {
     itemsToRender.forEach(function(item) {
         // wraper div
         const card = document.createElement('div');
-        card.className = 'gallery-item';
+
+        let tags_string = (item.tags).join(" ")
+        card.className = `gallery-item ${tags_string}`;
 
         card.innerHTML = `
             <img src="../work_gallery/cards/${item.filename}" alt="${item.title}">
@@ -60,3 +62,32 @@ function renderGallery(itemsToRender) {
         galleryGrid.appendChild(card);
     });
 }
+
+// get all filter buttons + gallery items
+let filter_buttons = document.querySelectorAll(".btn-gallery-filter")
+let gallery_items = document.querySelectorAll(".gallery-item")
+
+filter_buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        filter_buttons.forEach(button => {
+            button.classList.remove("active")
+        })
+
+        button.classList.add("active")
+    });
+
+    let cur_filter = button.dataset.filter
+
+    gallery_items.forEach(item => {
+        if (cur_filter == "all" || item.classList.contains(cur_filter)) {
+            item.classList.remove("hidden");
+        }
+        else {
+            item.classList.add("hidden");
+        }
+    })
+});
+
+// add listener -> when button clicked, remove active tags from other buttons and add it to clicked button
+// get tag of clicked button
+// cycle through all gallery items; if has tag or tag of clicked button == all, remove hidden class; otherwise add

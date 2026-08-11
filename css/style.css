@@ -604,6 +604,28 @@ nth-child(2) refers to the second spanned element
     cursor: pointer;
 }
 
+.btn-gallery-filter {
+    font-family: 'Crimson Text';
+    width: 8rem;
+    padding: 1rem;
+    transition: all 300ms ease;
+    cursor: pointer;
+    background: #E7F1F7;
+    color: #569AFF;
+    border: #C8DFE8 0.1rem solid;
+}
+.btn-gallery-filter.active {
+    background: #569AFF;
+    color: #E7F1F7;
+    border: #E7F1F7 0.1rem solid;
+    pointer-events: none;
+}
+.btn-gallery-filter:hover {
+    background: #F4FBFF;
+    color: var(--accent-red);
+    border: #DBF0F8 0.1rem solid;
+}
+
 .btn-wide {
     width: 10rem;
 }
@@ -966,13 +988,25 @@ nav {
 
 /* work gallery */
 
+.gallery-container {
+    margin: 0 10vw;
+    padding: 10vh 0;
+    text-align: center;
+}
+
+.gallery-filters {
+    padding: 5vh 0 10vh 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
 /* responsive grid layout */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     gap: 48px;
-    margin: 0 10vw;
-    padding: 10vh 0;
 }
 
 /* item cards */
@@ -1005,7 +1039,6 @@ nav {
     font-size: 1.3rem;
 
     /* the below are just in case */
-    color: #000;
     line-height: 1.6;
     font-weight: 500;
     margin: 0;
@@ -1014,9 +1047,12 @@ nav {
 .gallery-item-container p {
     font-size: 1rem;
 
-    */ the below are just in case */
-    color: #222;
+    /* the below are just in case */
     line-height: 1.6;
     font-weight: 300;
     margin: 0;
+}
+
+.hidden {
+    display: none;
 }

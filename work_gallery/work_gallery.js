@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", initGallery);
-
-const galleryGrid = document.getElementById('gallery-grid')
+const galleryGrid = document.getElementById('work-gallery-grid')
 
 let activeFilters = [];
 let galleryData = [];   // raw JSON data
@@ -28,9 +27,9 @@ async function initGallery() {
         const response = await fetch('../work_gallery/work_gallery.json');  // browser connets to json file
         const data = await response.json();                                 // browser parses data in json file
 
-        galleryData = data
-        renderGallery(galleryData)
-        // setupFiltering();
+        galleryData = data;
+        renderGallery(galleryData);
+        setupFiltering();
 
     }
     catch(error) {
@@ -50,7 +49,6 @@ function renderGallery(itemsToRender) {
 
         let tags_string = (item.tags).join(" ")
         card.className = `gallery-item ${tags_string}`;
-
         card.innerHTML = `
             <img src="../work_gallery/cards/${item.filename}" alt="${item.title}">
             <div class="gallery-item-content">
@@ -64,29 +62,31 @@ function renderGallery(itemsToRender) {
 }
 
 // get all filter buttons + gallery items
-let filter_buttons = document.querySelectorAll(".btn-gallery-filter")
-let gallery_items = document.querySelectorAll(".gallery-item")
+function setupFiltering() {
+    let filter_buttons = document.querySelectorAll(".btn-gallery-filter")
+    let gallery_items = document.querySelectorAll(".gallery-item")
 
-filter_buttons.forEach(button => {
-    button.addEventListener("click", () => {
-        filter_buttons.forEach(button => {
-            button.classList.remove("active")
-        })
+    filter_buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            filter_buttons.forEach(button => {
+                button.classList.remove("active")
+            })
 
-        button.classList.add("active")
+            button.classList.add("active")
+            let cur_filter = button.dataset.filter
+
+            gallery_items.forEach(item => {
+                if (cur_filter == "all" || item.classList.contains(cur_filter)) {
+                    item.classList.remove("hidden");
+                }
+                else {
+                    item.classList.add("hidden");
+                }
+            })
+        });
     });
+}
 
-    let cur_filter = button.dataset.filter
-
-    gallery_items.forEach(item => {
-        if (cur_filter == "all" || item.classList.contains(cur_filter)) {
-            item.classList.remove("hidden");
-        }
-        else {
-            item.classList.add("hidden");
-        }
-    })
-});
 
 // add listener -> when button clicked, remove active tags from other buttons and add it to clicked button
 // get tag of clicked button

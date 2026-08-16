@@ -262,7 +262,7 @@ Makes the lines of the hamburger menu visible
 .hamburger-icon span {
     width: 100%;
     height: 2px;
-    background-color: var(--accent-lilac);
+    background-color: var(--accent-red);
     transition: all 0.3 ease-in-out;
 }
 
@@ -723,6 +723,10 @@ nth-child(2) refers to the second spanned element
     align-items: center;
 }
 
+#poetry-generator {
+    padding: 0 0 10vw 0;
+}
+
 .about-text {
     align-items: center;
     padding: 20vh 10vw;
@@ -939,19 +943,47 @@ nth-child(2) refers to the second spanned element
 /* FOOTER */
 
 footer {
-    height: 20vh;
-    margin: 0;
+    height: 30vh;
     background-color: var(--accent-royal-blue);
     /*background-color: rgb(7, 44, 103);*/
     color: white !important;
+
+    background-image: url('../assets/background/collage.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 .footer__container {
-    height: 20vh;
+    height: 30vh;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+}
+
+.footer_apple_container {
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.homepage-pseudo-footer {
+    background-color: var(--accent-royal-blue);
+    flex-direction: column;
+    height: 10vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.apple_text {
+    font-size:0.25rem;
 }
 
 footer a:hover {

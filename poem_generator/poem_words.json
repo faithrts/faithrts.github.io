@@ -1,0 +1,24 @@
+{
+    "abstract_nouns": "thought,puddle,ripple,stirring,whisper,shadow,strand,dawn,susurration",
+    "blue_nouns": "blue,stone,edge,plane,egg,palm,shovel,cup,spoon,frond,tide,filigree,beetle",
+    "place_nouns": "curve,edge,carpet,lane,hallway,foyer,shore,coast,canopy,floor,ceiling",
+
+    "see_verbs": "look,gaze,stare,glance,peer,lean,peek,exit,open,run,curl,sway",
+    "do_verbs": "line,cover,dot,punctuate,fill,tickle,entreat,buffer,invade,polish",
+
+    "sky_adjs": "pale,rosy,gold,bright,dark,milky,dusky,brushed,shining,inky",
+    "earth_adjs": "soft,warm,grassy,dewy,fresh,cold,verdant,sweet,silky,leafy,lush",
+
+    "gerunds": "swirling,pulsing,craning,lilting,bobbing,rushing,glinting,winking,crying,sweating",
+    "directions": "up,down,right,left,out,in,beyond,within,north,south,east,west,southeast",
+    "adverbs": "suddenly,swiftly,gently,slowly,shakingly,tantalizingly,roughly,cleanly,smoothly",
+
+    "q": "when,why,how,where,how long,since when,and why,tell me: how",
+    "q_alt": "they ask why,do you know how,is it true you've heard,has no one seen",
+    "q_verbs": "sing,cry,breathe,dance,languish,awaken,collapse,self soothe,suffer as we do",
+
+    "time_words": "then,now,before,after,never,see,consider,contemplate",
+
+    "imperative_verbs_stop": "stop,block,bar,curb,ban,inhibit,forbid",
+    "imperative_verbs_start": "start,spur,spark,kindle,cradle,carve,embrace,kiss"
+}

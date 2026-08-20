@@ -405,7 +405,7 @@ nth-child(2) refers to the second spanned element
     border-radius: 10rem;
     animation: gradient 10s infinite;
     pointer-events: none;
-    z-index: 1;
+    z-index: -100;
 }
 @keyframes gradient {
     50%{
@@ -723,8 +723,18 @@ nth-child(2) refers to the second spanned element
     align-items: center;
 }
 
-#poetry-generator {
+#poem-section {
     padding: 0 0 10vw 0;
+    position: relative;
+}
+
+#poem-div {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    padding: 5rem 0 0 5rem;
 }
 
 .about-text {

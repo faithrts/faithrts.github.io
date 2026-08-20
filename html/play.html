@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../css/mediaqueries.css">
     <link rel="shortcut icon" type="image/png" href="../assets/favicon.ico">
 
+    <script src="../poem_generator/poem.js"></script> 
+
     <!-- to include icons from Font Awesome -->
     <script src="https://kit.fontawesome.com/4e32a8e765.js" crossorigin="anonymous"></script>
 </head>
@@ -53,8 +55,11 @@
         </div>
     </section>
 
-    <section id="poetry-generator">
-    
+    <section id="poem-section">
+        <div id="poem-div">
+            <script> generatePoem(); </script>
+        </div>
+
         <div class="gradient-background">
             <div class="gradient-blob" id="blob-1"></div>
             <div class="gradient-blob" id="blob-2"></div>

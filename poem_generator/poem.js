@@ -19,7 +19,12 @@ async function initPoemWords() {
 }
 
 
-function displayLine(line, last_line = false) {
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
+async function displayLine(line, last_line = false) {
     line = titleCase(line)
 
     var poem = document.getElementById("poem-div")
@@ -31,14 +36,44 @@ function displayLine(line, last_line = false) {
 
     new_line.appendChild(document.createTextNode(line))
     poem.appendChild(new_line)
+
+    await sleep(2000);
+}
+
+
+async function addEmptyLine() {
+    var poem = document.getElementById("poem-div")
+    var new_empty_line = document.createElement("br")
+
+    poem.appendChild(new_empty_line)
+
+    await sleep(2000);
 }
 
 
 async function generatePoem() {
     await initPoemWords()
-    line_count = 0
 
     displayLine(openingLine())
+    displayLine(parallelismLine())
+
+    for (let i = 0; i < choiceFromList([1, 1, 1, 2]); i++) {
+        displayLine(questionLine())
+    }
+
+    addEmptyLine()
+
+    for (let i = 0; i < choiceFromList([1, 1, 1, 1, 1, 1, 2, 3]); i++) {
+        displayLine(twoWordLine())
+    }
+
+    displayLine(fourWordLine())
+
+    addEmptyLine()
+
+    displayLine(emDashLine())
+
+    addEmptyLine()
 }
 
 // 
@@ -85,4 +120,83 @@ function openingLine() {
     let t = choiceFromList([" towards", " at", ":"])
 
     return `${verb} ${direction}${t} ${adj} ${noun}s`
+}
+
+// [gerund] [noun]s; [gerund] [noun]s
+function parallelismLine() {
+    let gerund = getWordFromList("gerunds")
+    let noun = getWordFromList("blue_nouns")
+
+    if (choiceFromList([0, 1])) {
+        let gerund_2 = getWordFromList("gerunds")
+        let noun_2 = getWordFromList("blue_nouns")
+        if (choiceFromList([0, 1])) {
+            noun = `${noun}s`
+            noun_2 = `${noun_2}s`
+        }
+        return `${gerund} ${noun}, ${gerund_2} ${noun_2}`
+    }
+    else {
+        return `${gerund} ${noun}s`
+    }
+}
+
+// [q] do [adj] [noun]s [verb] / [are you sure] [noun]s [verb]s
+function questionLine() {
+    let adj = getWordFromList("earth_adjs")
+    let noun = getWordFromList("blue_nouns")
+    let verb = getWordFromList("q_verbs")
+
+    if (choiceFromList([0, 1])) {
+        let q = getWordFromList("q_alt")
+        return `${q} ${noun}s ${verb}?`
+    }
+    else {
+        let q = getWordFromList("q")
+        return `${q} do ${adj} ${noun}s ${verb}?`
+    }
+}
+
+// [noun]s [verb] / [time]: [noun]
+function twoWordLine() {
+    let noun = getWordFromList("abstract_nouns")
+    if (choiceFromList([0, 1])) {
+        return `${noun}s ${verb}`
+    }
+    else {
+        let time = getWordFromList("time_words")
+        return `${time}: ${noun}`
+    }
+}
+
+// [noun]s [verb] the [place] / the [noun] [verb]s [adverb]
+function fourWordLine() {
+    let verb = getWordFromList("do_verbs")
+
+    if (choiceFromList([0, 1])) {
+        let noun = getWordFromList("abstract_nouns")
+        let place = getWordFromList("place_nouns")
+        return `${noun}s ${verb} the ${place}`
+    }
+    else {
+        let noun = getWordFromList("blue_nouns")
+        let adverb = getWordFromList("adverbs")
+        return `The ${noun} ${verb}s ${adverb}`
+    }
+}
+
+// [verb] the [adj] [noun] from [gerund] / [verb] the [adj] [gerund] [noun]
+function emDashLine() {
+    let adj = getWordFromList("sky_adjs")
+    let noun = getWordFromList("abstract_nouns")
+    let gerund = getWordFromList("gerunds")
+
+    if (choiceFromList([0, 1, 1, 1, 1, 1])) {
+        let verb = getWordFromList("imperative_verbs_stop")
+        return `${verb} the ${adj} ${noun} from ${gerund} --`
+    }
+    else {
+        let verb = getWordFromList("imperative_verbs_start")
+        return `${verb} the ${adj} ${gerund} ${noun} --`
+    }
 }
